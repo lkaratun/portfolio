@@ -1,9 +1,16 @@
 $dark-gray: #252934;
-$light-gray: #eaeaea;
+$lightGray: hsl(0, 0%, 92%);
+$lighterGray: hsl(0, 0%, 96%);
 $gray: hsl(0, 0%, 90%);
 $scrollBarWidth: 0.7vw;
 $scrollBarColor: 	hsl(208, 40%, 30%);
 $logoImgHeight: 10vh;
+$projectImgWidth: 35vw;
+
+@font-face {
+  font-family: 'DIN';
+  src: url('fonts/din1451alt.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 
 * {
@@ -15,12 +22,13 @@ body,html {
 }
 
 .scrolling-box {
-  background-color: $light-gray;
+  background-color: $lightGray;
   display: block;
   height: 100vh;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  text-align: center;
+	text-align: center;
+	font-family: "DIN", helvetica, sans-serif;
 }
 ::-webkit-scrollbar {
 	width: $scrollBarWidth;  /* remove scrollbar space */
@@ -33,7 +41,7 @@ body,html {
 
 	.navbar-nav{
 		.nav-link {
-			color:$light-gray;
+			color:$lightGray;
 		}
 		.nav-link:hover {
 		color:white;
@@ -80,7 +88,7 @@ background-size: cover;
 	 flex-flow: row wrap;
 	 align-items: center;
 	 justify-content: flex-end;
-	 .card{
+	 .skillCard{
 		box-sizing: content-box;
 		 background-color:$gray;
 		border: none;
@@ -100,4 +108,38 @@ background-size: cover;
 		 
 	 	}
  	}
+}
+
+#projects {
+	.subHeader {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	}
+	background: $lighterGray;
+	.projectsContainer {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: stretch;
+		justify-content: center;
+				
+	}
+	.projectCard {
+		display: inline-flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		width: $projectImgWidth;
+		height: auto;
+		box-sizing: content-box;
+		background-color:$gray;
+		margin: 1vh 1vh;
+		padding: 1vh 1vh;
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);		
+		img {
+			width: $projectImgWidth;
+			padding: 0.5vw;
+			box-sizing: border-box;
+			
+		}
+	}
 }
