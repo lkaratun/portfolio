@@ -1,9 +1,10 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
-body,html {
-	margin: 0;
-	padding: 0;
+
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
 .scrolling-box {
@@ -14,59 +15,40 @@ body,html {
   scroll-behavior: smooth;
   text-align: center;
 }
+
 ::-webkit-scrollbar {
-	width: 10px;  /* remove scrollbar space */
+  width: 0.7vw;
+  /* remove scrollbar space */
 }
+
 ::-webkit-scrollbar-thumb {
-	/* background: #343A40; */
-	background: red;
+  /* background: #343A40; */
+  background: #2e4f6b;
 }
-.navbar-nav>.nav-item {
-	margin: 0 2%;
+
+.navbar-nav > .nav-item {
+  margin: 0 2%;
 }
+
 .navbar {
-	margin-right: 9px;
+  margin-right: 0.7vw;
 }
 
 .page {
-	height: 100vh;
-	/* background-color: hsla(208, 49%, 50%, 0.69); */
-	margin: 0px;
-	display: flex;
-	flex-flow: column;
-	justify-content: center;
+  height: 100vh;
+  /* background-color: hsla(208, 49%, 50%, 0.69); */
+  margin: 0px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 /* Landing page */
 #home {
-background-color:  #252934;
-color: white;
-background-image: url("dark-evening.jpg");
-background-size: cover;
-
+  background-color: #252934;
+  color: white;
+  background-image: url("dark-evening.jpg");
+  background-size: cover;
 }
 
-
-
-/* 
-body {
-	background-color: #F7F7F7;
-}
-.navbar {
-	background-color: #5e8fba;
-}
-
-
-.navbar-nav{
-color: #F7F7F7 !important;
-}
-
-.navbar button{
-	color: #F7F7F7 !important;
-	}
-
-
-h1 {
-	color:black;
-} */
-
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+$dark-gray: #252934;
+$scrollbar-width: 0.7vw;
+$scrollbar-color: 	hsl(208, 40%, 30%);
+* {
+	box-sizing: border-box;
+}
+body,html {
+	margin: 0;
+	padding: 0;
+}
+
+.scrolling-box {
+  background-color: #eaeaea;
+  display: block;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+::-webkit-scrollbar {
+	width: $scrollbar-width;  /* remove scrollbar space */
+}
+::-webkit-scrollbar-thumb {
+	/* background: #343A40; */
+	background: $scrollbar-color;
+}
+.navbar-nav>.nav-item {
+	margin: 0 2%;
+}
+.navbar {
+	margin-right: $scrollbar-width;
+}
+
+.page {
+	height: 100vh;
+	/* background-color: hsla(208, 49%, 50%, 0.69); */
+	margin: 0px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+/* Landing page */
+#home {
+background-color:  $dark-gray;
+color: white;
+background-image: url("dark-evening.jpg");
+background-size: cover;
+
+}
