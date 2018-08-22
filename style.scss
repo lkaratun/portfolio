@@ -26,15 +26,26 @@ body,html {
 	width: $scrollBarWidth;  /* remove scrollbar space */
 }
 ::-webkit-scrollbar-thumb {
-	/* background: #343A40; */
 	background: $scrollBarColor;
-}
-.navbar-nav>.nav-item {
-	margin: 0 2%;
-	font-size: 1.3rem;
 }
 .navbar {
 	margin-right: $scrollBarWidth;
+
+	.navbar-nav{
+		.nav-link {
+			color:$light-gray;
+		}
+		.nav-link:hover {
+		color:white;
+	}
+	}
+
+	.nav-item{
+		margin: 0 2%;
+	font-size: 1.3rem;
+	}
+
+
 }
 
 .page {

@@ -22,17 +22,21 @@ body, html {
 }
 
 ::-webkit-scrollbar-thumb {
-  /* background: #343A40; */
   background: #2e4f6b;
-}
-
-.navbar-nav > .nav-item {
-  margin: 0 2%;
-  font-size: 1.3rem;
 }
 
 .navbar {
   margin-right: 0.7vw;
+}
+.navbar .navbar-nav .nav-link {
+  color: #eaeaea;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: white;
+}
+.navbar .nav-item {
+  margin: 0 2%;
+  font-size: 1.3rem;
 }
 
 .page {
