@@ -1,0 +1,38 @@
+body {
+	background-color: #F7F7F7;
+}
+
+.navbar {
+	background-color: #5e8fba;
+	
+}
+
+.navbar a{
+color: #F7F7F7 !important;
+}
+.navbar button{
+	color: #F7F7F7 !important;
+	}
+.jumbotron {
+	background-color: hsla(208, 49%, 50%, 0.69);
+	margin: 10px;
+}
+
+h1 {
+	color:black;
+}
+
+/*====================*/
+
+/*.navbar  { border: 0px; background-color: #659DBD; position: absolute; top: 40%; left: 5%; width: 130px; z-index: 999; }
+.navbar .navbar-collapse { padding: 0px; max-height: none; }
+.navbar .navbar-nav { float: none; }
+.navbar-nav { margin: 0px; }
+.navbar .nav > li { display: block; float: none; height: 60px; } 
+.navbar .nav > li a { display: block;  height: 80px; text-align: center; padding-top: 30px; font-weight: 600; color: #FFFFFF; }
+.navbar .nav > li a:hover, .navbar .nav > li a:focus { color: #999999; }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #22A39F; color: #FFFFFF; }
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar { background: #222222; }
+
+.fixed .navbar  { position: fixed; top: 60px; }*/
