@@ -37,7 +37,7 @@ body, html {
 .page {
   height: 100vh;
   /* background-color: hsla(208, 49%, 50%, 0.69); */
-  margin: 0px;
+  margin: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -49,6 +49,30 @@ body, html {
   color: white;
   background-image: url("dark-evening.jpg");
   background-size: cover;
+}
+
+#about {
+  padding: 5% 15%;
+}
+#about #bio {
+  font-size: 1.5rem;
+}
+#about #skills {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#about #skills div {
+  background-color: #e6e6e6;
+  border: none;
+  margin: 1%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
+}
+#about #skills img {
+  height: 10vh;
+  padding: 1vw;
+  box-sizing: content-box;
 }
 
 /*# sourceMappingURL=style.css.map */

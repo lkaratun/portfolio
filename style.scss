@@ -1,6 +1,11 @@
 $dark-gray: #252934;
-$scrollbar-width: 0.7vw;
-$scrollbar-color: 	hsl(208, 40%, 30%);
+$light-gray: #eaeaea;
+$gray: hsl(0, 0%, 90%);
+$scrollBarWidth: 0.7vw;
+$scrollBarColor: 	hsl(208, 40%, 30%);
+$logoImgHeight: 10vh;
+
+
 * {
 	box-sizing: border-box;
 }
@@ -10,7 +15,7 @@ body,html {
 }
 
 .scrolling-box {
-  background-color: #eaeaea;
+  background-color: $light-gray;
   display: block;
   height: 100vh;
   overflow-y: scroll;
@@ -18,26 +23,27 @@ body,html {
   text-align: center;
 }
 ::-webkit-scrollbar {
-	width: $scrollbar-width;  /* remove scrollbar space */
+	width: $scrollBarWidth;  /* remove scrollbar space */
 }
 ::-webkit-scrollbar-thumb {
 	/* background: #343A40; */
-	background: $scrollbar-color;
+	background: $scrollBarColor;
 }
 .navbar-nav>.nav-item {
 	margin: 0 2%;
 }
 .navbar {
-	margin-right: $scrollbar-width;
+	margin-right: $scrollBarWidth;
 }
 
 .page {
 	height: 100vh;
 	/* background-color: hsla(208, 49%, 50%, 0.69); */
-	margin: 0px;
+	margin: auto;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
+	// width: 70vw;
 }
 
 /* Landing page */
@@ -46,5 +52,34 @@ background-color:  $dark-gray;
 color: white;
 background-image: url("dark-evening.jpg");
 background-size: cover;
+}
+
+#about {
+	// width: 80vw;
+	#bio{
+	font-size: 1.5rem;
+	// display: inline-block;
+}
+ #skills {
+	 display: flex;
+	 flex-flow: row wrap;
+	 align-items: center;
+	 justify-content: space-between;
+	 div{
+		 background-color:$gray;
+		//  border: 1px solid black;
+		border: none;
+		 margin: 1%;
+		 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);
+	 }
+	 img{
+		//  width: auto;
+		 height: $logoImgHeight;
+		 padding: 1vw;
+		 box-sizing: content-box;
+		 
+	 }
+ }
+	padding: 5% 15%;
 
 }
