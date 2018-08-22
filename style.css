@@ -1,38 +1,72 @@
+* {
+	box-sizing: border-box;
+}
+body,html {
+	margin: 0;
+	padding: 0;
+}
+
+.scrolling-box {
+  background-color: #eaeaea;
+  display: block;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+::-webkit-scrollbar {
+	width: 10px;  /* remove scrollbar space */
+}
+::-webkit-scrollbar-thumb {
+	/* background: #343A40; */
+	background: red;
+}
+.navbar-nav>.nav-item {
+	margin: 0 2%;
+}
+.navbar {
+	margin-right: 9px;
+}
+
+.page {
+	height: 100vh;
+	/* background-color: hsla(208, 49%, 50%, 0.69); */
+	margin: 0px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+/* Landing page */
+#home {
+background-color:  #252934;
+color: white;
+background-image: url("dark-evening.jpg");
+background-size: cover;
+
+}
+
+
+
+/* 
 body {
 	background-color: #F7F7F7;
 }
-
 .navbar {
 	background-color: #5e8fba;
-	
 }
 
-.navbar a{
+
+.navbar-nav{
 color: #F7F7F7 !important;
 }
+
 .navbar button{
 	color: #F7F7F7 !important;
 	}
-.jumbotron {
-	background-color: hsla(208, 49%, 50%, 0.69);
-	margin: 10px;
-}
+
 
 h1 {
 	color:black;
-}
+} */
 
-/*====================*/
-
-/*.navbar  { border: 0px; background-color: #659DBD; position: absolute; top: 40%; left: 5%; width: 130px; z-index: 999; }
-.navbar .navbar-collapse { padding: 0px; max-height: none; }
-.navbar .navbar-nav { float: none; }
-.navbar-nav { margin: 0px; }
-.navbar .nav > li { display: block; float: none; height: 60px; } 
-.navbar .nav > li a { display: block;  height: 80px; text-align: center; padding-top: 30px; font-weight: 600; color: #FFFFFF; }
-.navbar .nav > li a:hover, .navbar .nav > li a:focus { color: #999999; }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #22A39F; color: #FFFFFF; }
-.navbar-default .navbar-toggle:hover .icon-bar,
-.navbar-default .navbar-toggle:focus .icon-bar { background: #222222; }
-
-.fixed .navbar  { position: fixed; top: 60px; }*/
