@@ -1,4 +1,7 @@
+const navBar = document.querySelector("#navbar");
+const navBarHeight = navBar.getBoundingClientRect().height;
 const navLinks = document.querySelectorAll(".scroll-link");
+
 navLinks.forEach(link => {
   link.addEventListener("click", handleNavigationClick);
 });
@@ -8,13 +11,14 @@ const sectionsCoords = [];
 const sections = document.querySelectorAll("section");
 sections.forEach(section => {
   sectionsCoords.push(section.offsetTop);
+  if (section.id !== "home") {
+    section.style.height = `${section.getBoundingClientRect().height - navBarHeight}px`;
+  }
 });
 const sectionsBreakpoints = [];
 for (let i = 0; i < sectionsCoords.length - 1; i++) {
   sectionsBreakpoints.push((sectionsCoords[i] + sectionsCoords[i + 1]) / 2);
 }
-console.log(sectionsCoords);
-console.log(sectionsBreakpoints);
 
 
 function handleScroll() {
@@ -27,8 +31,8 @@ function handleScroll() {
   highlightLink(navLinks[sectionsBreakpoints.length]);
 }
 
-const navArrow = document.querySelector("#downArrow");
-navArrow.addEventListener("click", handleArrowClick);
+const downArrow = document.querySelector("#downArrow");
+downArrow.addEventListener("click", handleArrowClick);
 
 
 
@@ -61,8 +65,6 @@ window.onscroll = () => {
   setNavBarVisibility();
   handleScroll();
 };
-const navBar = document.querySelector("#navbar");
-const navBarHeight = navBar.getBoundingClientRect().height;
 const scrollThreshold = window.innerHeight / 4;
 function setNavBarVisibility() {
   if (window.pageYOffset > scrollThreshold) {
@@ -74,7 +76,7 @@ function setNavBarVisibility() {
 }
 
 function smoothScroll(target, duration) {
-  const targetPosition = target.getBoundingClientRect().top;
+  const targetPosition = target.getBoundingClientRect().top - navBarHeight;
   const startPosition = window.pageYOffset;
   let startTime = null;
   function animation(currentTime) {

@@ -65,12 +65,12 @@ body,html {
 	margin: auto;
 	display: flex;
 	flex-flow: column;
-	justify-content: center;
+	justify-content: space-around;
 	color: $graphite;
 	.subHeader {
 		font-size: 1.1rem;
 		margin-bottom: 2rem;
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 	h1, h2 {
 		cursor: default;
@@ -84,9 +84,21 @@ color: white;
 background-image: url("../dark-evening.jpg");
 background-size: cover;
 align-items: center;
+justify-content: center;
 	#downArrow{
 		width: 150px;
-		height: 150px;
+		height: 80px;
+		.shape {
+			fill: none;
+			stroke: hsl(208, 40%, 30%);
+			stroke-linecap: round;
+			stroke-linejoin: bevel;
+			stroke-width: 3px;
+		}		
+	}
+	#downArrow:hover .shape {
+		stroke: white;
+
 	}
 }
 
@@ -124,7 +136,20 @@ align-items: center;
 		 box-sizing: content-box;
 		 
 	 	}
- 	}
+	 }
+	 #downArrow {
+		polyline.cls-1 {	
+			fill: none;
+			stroke: hsl(208, 40%, 30%) !important;
+			stroke-linecap: round;
+			stroke-linejoin: bevel;
+			stroke-width: 3px;
+
+			:hover {
+				stroke: white !important;
+			}
+		}
+	}
 }
 
 #projects {
