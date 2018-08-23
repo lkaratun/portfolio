@@ -33,7 +33,7 @@ navArrow.addEventListener("click", handleArrowClick);
 
 
 
-function handleArrowClick(e) {
+function handleArrowClick() {
   highlightLink(document.querySelector("#about-link"));
   const scrollTarget = document.querySelector("#about");
   smoothScroll(scrollTarget, 300);
@@ -56,15 +56,15 @@ function restoreLinksAppearance(links) {
 
 
 
+
+window.onscroll = () => {
+  setNavBarVisibility();
+  handleScroll();
+};
 const navBar = document.querySelector("#navbar");
 const navBarHeight = navBar.getBoundingClientRect().height;
 const scrollThreshold = window.innerHeight / 4;
-
-window.onscroll = () => {
-  setNavBarVisibility(navBar, scrollThreshold);
-  handleScroll();
-};
-function setNavBarVisibility(navBar, scrollThreshold) {
+function setNavBarVisibility() {
   if (window.pageYOffset > scrollThreshold) {
     navBar.style.top = "0";
   }
@@ -82,7 +82,7 @@ function smoothScroll(target, duration) {
     const timeElapsed = currentTime - startTime;
     const run = easeOutQuad(timeElapsed, startPosition, targetPosition, duration);
     window.scrollTo(0, run);
-    if (timeElapsed < duration) { requestAnimationFrame(animation); }
+    if (timeElapsed < duration) { window.requestAnimationFrame(animation); }
   }
 
   function easeOutQuad(t, b, c, d) {
@@ -90,5 +90,5 @@ function smoothScroll(target, duration) {
     return -c * t * (t - 2) + b;
   };
 
-  requestAnimationFrame(animation);
+  window.requestAnimationFrame(animation);
 }

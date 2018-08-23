@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
+  "globals": {
+    "window": false,
+    "document": false,
+    "Blob": false,
+    "navigator": false,
+    "fetch": false
+  },
+  "rules": {
+    "no-plusplus": 0,
+    "no-use-before-define": 0,
+    "no-mixed-operators": 0,
+    "no-console": 0,
+    "no-underscore-dangle": 0,
+    "no-param-reassign": [
+      "off",
+      {
+        "props": false,
+        "ignorePropertyModificationsFor": [
+          "data"
+        ]
+      }
+    ],
+    "func-names": [
+      "off",
+      "as-needed"
+    ],
+    "semi": "error",
+    "linebreak-style": "off",
+    "import/no-extraneous-dependencies": 0
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "env": {
+    "jest": true
+  }
+}

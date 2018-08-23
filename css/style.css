@@ -58,6 +58,9 @@ body, html {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
+.page h1, .page h2 {
+  cursor: default;
+}
 
 /* Landing page */
 #home {
