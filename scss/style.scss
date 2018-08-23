@@ -1,4 +1,6 @@
-$dark-gray: #252934;
+$graphite: hsl(45, 17%, 19%);
+$graphiteHighlight: 	hsl(45, 17%, 45%);
+$darkGray: #252934;
 $lightGray: hsl(0, 0%, 92%);
 $lighterGray: hsl(0, 0%, 96%);
 $gray: hsl(0, 0%, 90%);
@@ -9,12 +11,13 @@ $projectImgWidth: 35vw;
 
 @font-face {
   font-family: 'DIN';
-  src: url('fonts/din1451alt.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('../fonts/din1451alt.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 
 * {
 	box-sizing: border-box;
+	font-family: "DIN", helvetica, sans-serif;
 }
 body,html {
 	margin: 0;
@@ -28,7 +31,7 @@ body,html {
   overflow-y: scroll;
   scroll-behavior: smooth;
 	text-align: center;
-	font-family: "DIN", helvetica, sans-serif;
+
 }
 ::-webkit-scrollbar {
 	width: $scrollBarWidth;  /* remove scrollbar space */
@@ -63,15 +66,21 @@ body,html {
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
-	// width: 70vw;
+	color: $graphite;
 }
 
 /* Landing page */
 #home {
-background-color:  $dark-gray;
+background-color:  $darkGray;
 color: white;
-background-image: url("dark-evening.jpg");
+background-image: url("../dark-evening.jpg");
 background-size: cover;
+}
+
+.subHeader {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
 }
 
 #about {
@@ -111,11 +120,7 @@ background-size: cover;
 }
 
 #projects {
-	.subHeader {
-		font-size: 1.5rem;
-		margin-bottom: 2rem;
-		margin-top: 2rem;
-	}
+
 	background: $lighterGray;
 	.projectsContainer {
 		display: flex;
@@ -141,5 +146,26 @@ background-size: cover;
 			box-sizing: border-box;
 			
 		}
+	}
+}
+
+#contacts {
+	align-items: center;
+	text-align: left;
+	.subHeader {
+		display: flex;
+		flex-flow: column wrap;
+	}
+	a {
+		color: $graphite;
+		img, object {
+			width:3rem;
+			margin: 1rem;
+			vertical-align: middle;
+		}
+	}
+	a:hover {
+		color: $graphiteHighlight;
+		text-decoration: none;
 	}
 }

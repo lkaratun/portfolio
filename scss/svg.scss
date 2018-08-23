@@ -1,0 +1,15 @@
+$graphite: #383428;
+$graphiteHighlight: #383428;
+
+svg {
+  width: 30px;
+  display: inline-block;
+  path {
+    fill:$graphite;
+  }
+  // :hover {
+  //   path {
+  //     fill: purple;
+  //   }
+  // }
+}

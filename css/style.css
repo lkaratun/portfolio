@@ -1,10 +1,11 @@
 @font-face {
   font-family: "DIN";
-  src: url("fonts/din1451alt.ttf") format("truetype");
+  src: url("../fonts/din1451alt.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
 * {
   box-sizing: border-box;
+  font-family: "DIN", helvetica, sans-serif;
 }
 
 body, html {
@@ -19,7 +20,6 @@ body, html {
   overflow-y: scroll;
   scroll-behavior: smooth;
   text-align: center;
-  font-family: "DIN", helvetica, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -52,14 +52,21 @@ body, html {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  color: #393528;
 }
 
 /* Landing page */
 #home {
   background-color: #252934;
   color: white;
-  background-image: url("dark-evening.jpg");
+  background-image: url("../dark-evening.jpg");
   background-size: cover;
+}
+
+.subHeader {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 #about {
@@ -100,11 +107,6 @@ body, html {
 #projects {
   background: whitesmoke;
 }
-#projects .subHeader {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
 #projects .projectsContainer {
   display: flex;
   flex-flow: row wrap;
@@ -127,6 +129,27 @@ body, html {
   width: 35vw;
   padding: 0.5vw;
   box-sizing: border-box;
+}
+
+#contacts {
+  align-items: center;
+  text-align: left;
+}
+#contacts .subHeader {
+  display: flex;
+  flex-flow: column wrap;
+}
+#contacts a {
+  color: #393528;
+}
+#contacts a img, #contacts a object {
+  width: 3rem;
+  margin: 1rem;
+  vertical-align: middle;
+}
+#contacts a:hover {
+  color: #867d5f;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
