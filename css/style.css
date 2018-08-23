@@ -3,6 +3,15 @@
   src: url("../fonts/din1451alt.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
+::-webkit-scrollbar {
+  width: 0.7vw;
+  background: #393528;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e4f6b;
+}
+
 * {
   box-sizing: border-box;
   font-family: "DIN", helvetica, sans-serif;
@@ -17,22 +26,13 @@ body, html {
   background-color: #ebebeb;
   display: block;
   height: 100vh;
-  overflow-y: scroll;
   scroll-behavior: smooth;
   text-align: center;
 }
 
-::-webkit-scrollbar {
-  width: 0.7vw;
-  /* remove scrollbar space */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2e4f6b;
-}
-
 .navbar {
-  margin-right: 0.7vw;
+  top: -70px;
+  transition: top 0.2s ease-out;
 }
 .navbar .navbar-nav .nav-link {
   color: #ebebeb;
@@ -47,12 +47,16 @@ body, html {
 
 .page {
   height: 100vh;
-  /* background-color: hsla(208, 49%, 50%, 0.69); */
   margin: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   color: #393528;
+}
+.page .subHeader {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 /* Landing page */
@@ -61,12 +65,11 @@ body, html {
   color: white;
   background-image: url("../dark-evening.jpg");
   background-size: cover;
+  align-items: center;
 }
-
-.subHeader {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+#home #downArrow {
+  width: 100px;
+  height: 100px;
 }
 
 #about {
