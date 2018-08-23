@@ -1,12 +1,23 @@
-let navLinks = document.querySelectorAll(".nav-link");
+let navLinks = document.querySelectorAll(".scroll-link");
+navLinks.forEach(link => link.addEventListener("click", handleNavigationClick));
+let navArrow = document.querySelector("#downArrow");
+navArrow.addEventListener("click", clickArrow);
 
 
-navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    restoreLinksAppearance(navLinks);
-    e.target.style.textDecoration = "underline";
-  })
-})
+function clickArrow(e) {
+  restoreLinksAppearance(navLinks);
+  document.querySelector("#about-link").style.textDecoration = "underline";
+  let scrollTarget = document.querySelector(e.target.parentElement.getAttribute("href"));
+  console.log(scrollTarget);
+  smoothScroll(scrollTarget, 300);
+}
+
+function handleNavigationClick(e) {
+  restoreLinksAppearance(navLinks);
+  e.target.style.textDecoration = "underline";
+  let scrollTarget = document.querySelector(e.target.getAttribute("href"));
+  smoothScroll(scrollTarget, 300);
+}
 
 function restoreLinksAppearance(links) {
   links.forEach(link => link.style.textDecoration = "none")
@@ -30,10 +41,7 @@ function smoothScroll(target, duration) {
   // let targetPosition = target.getBoundingClientRect().top - navBarHeight;
   let targetPosition = target.getBoundingClientRect().top;
   let startPosition = window.pageYOffset;
-  // let distance = targetPosition - startPosition;
   let startTime = null;
-
-
   function animation(currentTime) {
     if (startTime === null) { startTime = currentTime; }
     let timeElapsed = currentTime - startTime;
@@ -51,8 +59,8 @@ function smoothScroll(target, duration) {
 }
 
 
-document.querySelectorAll('.scroll-link').forEach((link) => link.addEventListener('click', (e) => {
-  // console.log(document.querySelector(e.target.getAttribute("href")));
-  let target = document.querySelector(e.target.getAttribute("href"));
-  smoothScroll(target, 300);
-}));
+// document.querySelectorAll('.scroll-link').forEach((link) => link.addEventListener('click', (e) => {
+//   // console.log(document.querySelector(e.target.getAttribute("href")));
+//   let target = document.querySelector(e.target.getAttribute("href"));
+//   smoothScroll(target, 300);
+// }));

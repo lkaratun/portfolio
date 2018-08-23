@@ -54,7 +54,7 @@ body, html {
   color: #393528;
 }
 .page .subHeader {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
@@ -68,8 +68,8 @@ body, html {
   align-items: center;
 }
 #home #downArrow {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 #about {
@@ -98,7 +98,7 @@ body, html {
 #about .skills .label {
   margin-left: 0;
   margin-right: auto;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 #about .skills img {
