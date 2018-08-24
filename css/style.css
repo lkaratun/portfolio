@@ -58,6 +58,11 @@ body, html {
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
+.page .header {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
 .page h1, .page h2 {
   cursor: default;
 }
@@ -65,7 +70,7 @@ body, html {
 /* Landing page */
 #home {
   background-color: #252934;
-  color: white;
+  color: whitesmoke;
   background-image: url("../dark-evening.jpg");
   background-size: cover;
   align-items: center;
@@ -87,7 +92,7 @@ body, html {
 }
 
 #about {
-  padding: 0% 15%;
+  padding: 0% 30%;
   box-sizing: content-box;
   justify-content: flex-start;
 }
@@ -104,9 +109,9 @@ body, html {
 }
 #about .skills .skillCard {
   box-sizing: content-box;
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
   border: none;
-  margin: 1vh 1vh;
+  margin: 1vh;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
 }
 #about .skills .label {
@@ -116,8 +121,8 @@ body, html {
   font-weight: 700;
 }
 #about .skills img {
-  height: 5vh;
-  padding: 0.5vw;
+  height: 6vh;
+  padding: 0.2vw;
   box-sizing: content-box;
 }
 #about #downArrow polyline.cls-1 {
@@ -141,13 +146,14 @@ body, html {
   justify-content: center;
 }
 #projects .projectCard {
+  position: relative;
   display: inline-flex;
   flex-flow: column wrap;
   justify-content: space-between;
   width: 35vw;
   height: auto;
   box-sizing: content-box;
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
   margin: 1vh 1vh;
   padding: 1vh 1vh;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
@@ -156,6 +162,36 @@ body, html {
   width: 35vw;
   padding: 0.5vw;
   box-sizing: border-box;
+}
+#projects .projectCard .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #2e4f6b;
+  opacity: 0.95;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+#projects .projectCard .overlay .description {
+  width: 30vw;
+  height: 5rem;
+  left: 10%;
+  top: 40%;
+  position: absolute;
+  color: #e0e0e0;
+  overflow: hidden;
+  font-size: 1rem;
+}
+#projects .projectCard .overlay .description .projectName {
+  font-size: 135%;
+  color: whitesmoke;
+}
+#projects .projectCard:hover .overlay {
+  width: 0;
+  left: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
 #contacts {
