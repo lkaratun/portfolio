@@ -6,7 +6,7 @@ $lighterGray: hsl(0, 0%, 96%);
 $gray: hsl(0, 0%, 90%);
 $scrollBarWidth: 0.7vw;
 $scrollBarColor: 	hsl(208, 40%, 30%);
-$logoImgHeight: 10vh;
+$logoImgHeight: 5vh;
 $projectImgWidth: 35vw;
 
 @font-face {
@@ -65,7 +65,7 @@ body,html {
 	margin: auto;
 	display: flex;
 	flex-flow: column;
-	justify-content: space-around;
+	justify-content: center;
 	color: $graphite;
 	.subHeader {
 		font-size: 1.1rem;
@@ -106,10 +106,10 @@ justify-content: center;
 #about {
 	padding: 0% 15%;
 	box-sizing: content-box;
+	justify-content: flex-start;
 	#bio{
-	font-size: 1.5rem;
-	margin-bottom: 2rem;
-	margin-top: 2rem;
+	margin-bottom: 3rem;
+	margin-top: 3rem;
 	}
  .skills {
 	box-sizing: content-box;
