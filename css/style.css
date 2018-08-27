@@ -106,8 +106,8 @@ body, html {
   justify-content: flex-start;
 }
 #about #bio {
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 #about .skills {
   box-sizing: content-box;
