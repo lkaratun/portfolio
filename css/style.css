@@ -179,15 +179,19 @@ body, html {
   top: 0;
   left: 0;
   background: #2e4f6b;
-  opacity: 0.95;
-  transition: all 0.5s ease-in-out;
+  opacity: 0.9;
+  transition: all 0.1s ease-out;
   overflow: hidden;
+}
+#projects .projectCard .overlay .project-link {
+  opacity: 0;
+  transition: all 0.1s ease-out;
 }
 #projects .projectCard .overlay .description {
   width: 30vw;
-  height: 5rem;
+  height: 10rem;
   left: 10%;
-  top: 40%;
+  top: 30%;
   position: absolute;
   color: #e0e0e0;
   overflow: hidden;
@@ -197,10 +201,9 @@ body, html {
   font-size: 135%;
   color: whitesmoke;
 }
-#projects .projectCard:hover .overlay {
-  width: 0;
-  left: 100%;
-  transition: all 0.2s ease-in-out;
+#projects .projectCard:hover .project-link {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 
 #contacts {
@@ -220,7 +223,7 @@ body, html {
   color: #393528;
 }
 #contacts a img, #contacts a object {
-  width: 3rem;
+  width: 1.5rem;
   margin: 1rem;
   vertical-align: middle;
 }

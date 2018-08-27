@@ -207,15 +207,19 @@ justify-content: center;
 			top: 0;
 			left: 0;
 			background: $darkBlue;
-			opacity: 0.95;
-			transition: all 0.5s ease-in-out;
+			opacity: 0.9;
+			transition: all 0.1s ease-out;
 			overflow: hidden;
+			.project-link {
+				opacity: 0;
+				transition: all 0.1s ease-out;
+			}
 			
 			.description {
 				width: 30vw;
-				height: 5rem;
+				height: 10rem;
 				left: 10%;
-				top: 40%;
+				top: 30%;
 				position: absolute;
 				color: $gray;
 				overflow: hidden;
@@ -228,11 +232,15 @@ justify-content: center;
 
 			
 		}
-		&:hover .overlay{
-			width: 0;
-			left: 100%;
-			transition: all 0.2s ease-in-out;
-		}		
+		// &:hover .overlay{
+		// 	width: 0;
+		// 	left: 100%;
+		// 	transition: all 0.2s ease-in-out;
+		// }		
+		&:hover .project-link{
+			opacity: 1;
+			transition: all 0.5s ease-in-out;
+		}
 	}
 }
 
@@ -251,7 +259,7 @@ justify-content: center;
 	a {
 		color: $graphite;
 		img, object {
-			width:3rem;
+			width:1.5rem;
 			margin: 1rem;
 			vertical-align: middle;
 		}
