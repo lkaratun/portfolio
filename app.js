@@ -1,3 +1,5 @@
+
+
 const navBar = document.querySelector("#navbar");
 const navBarHeight = navBar.getBoundingClientRect().height;
 const navLinks = document.querySelectorAll(".scroll-link");

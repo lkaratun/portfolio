@@ -71,8 +71,9 @@ body, html {
 #home {
   background-color: #252934;
   color: whitesmoke;
-  background-image: url("../dark-evening.jpg");
+  background-image: url("../toronto-bg.jpg");
   background-size: cover;
+  background-position: bottom;
   align-items: center;
   justify-content: center;
 }
@@ -91,8 +92,16 @@ body, html {
   stroke: white;
 }
 
+#photo {
+  display: block;
+  object-fit: scale-down;
+  object-position: 0 0;
+  width: 30%;
+  border-radius: 50%;
+}
+
 #about {
-  padding: 0% 30%;
+  padding: 0% 25%;
   box-sizing: content-box;
   justify-content: flex-start;
 }
