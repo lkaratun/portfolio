@@ -127,7 +127,10 @@ justify-content: center;
 	margin-bottom: 1rem;
 	margin-top: 2rem;
 	}
-	// .card {width: 20rem;}
+	.card {
+		// width: 20rem;
+		// background: 		hsl(208, 30%, 90%);
+	}
  .skills {
 	box-sizing: content-box;
 	 display: flex;
@@ -236,9 +239,14 @@ justify-content: center;
 #contacts {
 	align-items: center;
 	text-align: left;
+	position: relative;
+	justify-content: flex-start;
+	h2 {
+		margin-top: 3rem;
+	}
 	.subHeader {
 		display: flex;
-		flex-flow: column wrap;
+		flex-flow: row wrap;
 	}
 	a {
 		color: $graphite;
@@ -252,4 +260,20 @@ justify-content: center;
 		color: $graphiteHighlight;
 		text-decoration: none;
 	}
+}
+
+// Footer
+section:last-child::after {
+	content: "";
+	background: url(../toronto_skyline.png);
+	background-size: contain;
+	background-repeat: repeat-x;
+	background-position: bottom;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
 }

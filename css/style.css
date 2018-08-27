@@ -206,10 +206,15 @@ body, html {
 #contacts {
   align-items: center;
   text-align: left;
+  position: relative;
+  justify-content: flex-start;
+}
+#contacts h2 {
+  margin-top: 3rem;
 }
 #contacts .subHeader {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
 }
 #contacts a {
   color: #393528;
@@ -222,6 +227,21 @@ body, html {
 #contacts a:hover {
   color: #867d5f;
   text-decoration: none;
+}
+
+section:last-child::after {
+  content: "";
+  background: url(../toronto_skyline.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
