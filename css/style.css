@@ -96,12 +96,12 @@ body, html {
   display: block;
   object-fit: scale-down;
   object-position: 0 0;
-  width: 30%;
+  width: 20%;
   border-radius: 50%;
 }
 
 #about {
-  padding: 0% 25%;
+  padding: 0% 15%;
   box-sizing: content-box;
   justify-content: flex-start;
 }
