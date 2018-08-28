@@ -65,6 +65,7 @@ body, html {
 }
 .page h1, .page h2 {
   cursor: default;
+  margin: 1rem;
 }
 
 /* Landing page */
@@ -104,10 +105,15 @@ body, html {
   padding: 0% 15%;
   box-sizing: content-box;
   justify-content: flex-start;
+  align-items: center;
 }
 #about #bio {
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
+  width: 40em;
+}
+#about .card-group {
+  align-items: stretch;
+  width: 50em;
 }
 #about .skills {
   box-sizing: content-box;
@@ -180,12 +186,12 @@ body, html {
   left: 0;
   background: #2e4f6b;
   opacity: 0.9;
-  transition: all 0.1s ease-out;
+  transition: all 0.25s ease-out;
   overflow: hidden;
 }
 #projects .projectCard .overlay .project-link {
   opacity: 0;
-  transition: all 0.1s ease-out;
+  transition: all 0.25s ease-out;
 }
 #projects .projectCard .overlay .description {
   width: 30vw;
@@ -193,7 +199,7 @@ body, html {
   left: 10%;
   top: 30%;
   position: absolute;
-  color: #e0e0e0;
+  color: #ebf3fa;
   overflow: hidden;
   font-size: 1rem;
 }
@@ -203,7 +209,11 @@ body, html {
 }
 #projects .projectCard:hover .project-link {
   opacity: 1;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-out;
+}
+#projects .projectCard:hover .overlay {
+  opacity: 0.95;
+  transition: all 0.2s ease-out;
 }
 
 #contacts {

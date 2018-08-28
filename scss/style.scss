@@ -6,6 +6,8 @@ $lighterGray: hsl(0, 0%, 96%);
 $gray: hsl(0, 0%, 88%);
 $scrollBarWidth: 0.7vw;
 $darkBlue: 	hsl(208, 40%, 30%);
+$lightBlue: 	hsl(208, 60%, 95%);
+
 $logoImgHeight: 6vh;
 $projectImgWidth: 35vw;
 
@@ -81,6 +83,7 @@ body,html {
 
 	h1, h2 {
 		cursor: default;
+		margin: 1rem;
 	}
 }
 
@@ -123,13 +126,14 @@ justify-content: center;
 	padding: 0% 15%;
 	box-sizing: content-box;
 	justify-content: flex-start;
+	align-items: center;
 	#bio{
-	margin-bottom: 1rem;
-	margin-top: 2rem;
+	margin: 2rem 0;
+	width: 40em;
 	}
-	.card {
-		// width: 20rem;
-		// background: 		hsl(208, 30%, 90%);
+	.card-group {
+		align-items: stretch;
+		width: 50em;
 	}
  .skills {
 	box-sizing: content-box;
@@ -208,11 +212,11 @@ justify-content: center;
 			left: 0;
 			background: $darkBlue;
 			opacity: 0.9;
-			transition: all 0.1s ease-out;
+			transition: all 0.25s ease-out;
 			overflow: hidden;
 			.project-link {
 				opacity: 0;
-				transition: all 0.1s ease-out;
+				transition: all 0.25s ease-out;
 			}
 			
 			.description {
@@ -221,7 +225,7 @@ justify-content: center;
 				left: 10%;
 				top: 30%;
 				position: absolute;
-				color: $gray;
+				color: $lightBlue;
 				overflow: hidden;
 				font-size: 1rem;
 				.projectName {
@@ -237,10 +241,16 @@ justify-content: center;
 		// 	left: 100%;
 		// 	transition: all 0.2s ease-in-out;
 		// }		
-		&:hover .project-link{
+		&:hover {
+		.project-link{
 			opacity: 1;
-			transition: all 0.5s ease-in-out;
+			transition: all 0.1s ease-out;
 		}
+		.overlay {
+			opacity: 0.95;
+			transition: all 0.2s ease-out;
+		}
+	}
 	}
 }
 
