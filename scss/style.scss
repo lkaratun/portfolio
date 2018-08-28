@@ -92,7 +92,8 @@ body,html {
 background-color:  $darkGray;
 color: $lighterGray;
 // background-image: url("../dark-evening.jpg");
-background-image: url("../toronto-bg.jpg");
+// background-image: url("../toronto-bg.jpg");
+background-image: url(http://res.cloudinary.com/lkaratun/image/upload/s--qsm14XaB--/q_jpegmini:2/v1535422706/portfolio/toronto-bg.jpg);
 background-size: cover;
 background-position: bottom;
 align-items: center;
@@ -284,6 +285,7 @@ justify-content: center;
 section:last-child::after {
 	content: "";
 	background: url(../toronto_skyline.png);
+	// background: url(http://res.cloudinary.com/lkaratun/image/upload/s--qsm14XaB--/q_jpegmini:2/v1535422706/portfolio/toronto-bg.jpg);
 	background-size: contain;
 	background-repeat: repeat-x;
 	background-position: bottom;
