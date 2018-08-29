@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/lkaratun/portfolio/issues"
   },
-  "homepage": "https://github.com/lkaratun/portfolio#readme"
+  "homepage": "https://github.com/lkaratun/portfolio#readme",
+  "prettier": {
+    "printWidth": 100
+  }
 }

@@ -17,7 +17,8 @@
   font-family: "DIN", helvetica, sans-serif;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -26,7 +27,6 @@ body, html {
   background-color: #ebebeb;
   display: block;
   height: 100vh;
-  scroll-behavior: smooth;
   text-align: center;
 }
 
@@ -63,7 +63,8 @@ body, html {
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
-.page h1, .page h2 {
+.page h1,
+.page h2 {
   cursor: default;
   margin: 1rem;
 }
@@ -232,7 +233,8 @@ body, html {
 #contacts a {
   color: #393528;
 }
-#contacts a img, #contacts a object {
+#contacts a img,
+#contacts a object {
   width: 1.5rem;
   margin: 1rem;
   vertical-align: middle;

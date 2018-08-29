@@ -1,297 +1,320 @@
 $graphite: hsl(45, 17%, 19%);
-$graphiteHighlight: 	hsl(45, 17%, 45%);
+$graphiteHighlight: hsl(45, 17%, 45%);
 $darkGray: #252934;
 $lightGray: hsl(0, 0%, 92%);
 $lighterGray: hsl(0, 0%, 96%);
 $gray: hsl(0, 0%, 88%);
 $scrollBarWidth: 0.7vw;
-$darkBlue: 	hsl(208, 40%, 30%);
-$lightBlue: 	hsl(208, 60%, 95%);
-
+$darkBlue: hsl(208, 40%, 30%);
+$lightBlue: hsl(208, 60%, 95%);
 $logoImgHeight: 6vh;
 $projectImgWidth: 35vw;
 
-
 @font-face {
-  font-family: 'DIN';
-  src: url('../fonts/din1451alt.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-family: "DIN";
+  src: url("../fonts/din1451alt.ttf") format("truetype");
+  /* Safari, Android, iOS */
 }
 
 ::-webkit-scrollbar {
-	width: $scrollBarWidth;  
-	background: $graphite;
-}
-::-webkit-scrollbar-thumb {
-	background: $darkBlue;
+  width: $scrollBarWidth;
+  background: $graphite;
 }
 
+::-webkit-scrollbar-thumb {
+  background: $darkBlue;
+}
 
 * {
-	box-sizing: border-box;
-	font-family: "DIN", helvetica, sans-serif;
+  box-sizing: border-box;
+  font-family: "DIN", helvetica, sans-serif;
 }
-body,html {
-	margin: 0;
-	padding: 0;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 .scrolling-box {
   background-color: $lightGray;
   display: block;
   height: 100vh;
-  // overflow-y: scroll;
-  scroll-behavior: smooth;
-	text-align: center;
-
+  // overflow-y: none;
+  // scroll-behavior: smooth;
+  text-align: center;
 }
 
 .navbar {
-	// margin-right: $scrollBarWidth;
-	top: -70px;
-	transition: top 0.2s ease-out;
-	.navbar-nav{
-		.nav-link {
-			color:$lightGray;
-		}
-		.nav-link:hover {
-		color:white;
-		}
-	}
-	.nav-item{
-		margin: 0 2%;
-	font-size: 1.3rem;
-	}
+  // margin-right: $scrollBarWidth;
+  top: -70px;
+  transition: top 0.2s ease-out;
+
+  .navbar-nav {
+    .nav-link {
+      color: $lightGray;
+    }
+
+    .nav-link:hover {
+      color: white;
+    }
+  }
+
+  .nav-item {
+    margin: 0 2%;
+    font-size: 1.3rem;
+  }
 }
 
 .page {
-	height: 100vh;
-	margin: auto;
-	display: flex;
-	flex-flow: column;
-	justify-content: center;
-	color: $graphite;
-	.subHeader {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
-		margin-top: 1rem;
-	}
-	.header {
-		font-size: 1.25rem;
-		margin-bottom: 2rem;
-		margin-top: 1rem;
-	}
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  color: $graphite;
 
-	h1, h2 {
-		cursor: default;
-		margin: 1rem;
-	}
+  .subHeader {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .header {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  h1,
+  h2 {
+    cursor: default;
+    margin: 1rem;
+  }
 }
 
 /* Landing page */
 #home {
-background-color:  $darkGray;
-color: $lighterGray;
-background-image: url(https://res.cloudinary.com/lkaratun/image/upload/v1535470462/portfolio/toronto_bg_web.jpg);
-background-size: cover;
-background-position: bottom;
-align-items: center;
-justify-content: center;
-	#downArrow{
-		width: 150px;
-		height: 80px;
-		.shape {
-			fill: none;
-			stroke: hsl(208, 40%, 30%);
-			stroke-linecap: round;
-			stroke-linejoin: bevel;
-			stroke-width: 3px;
-		}		
-	}
-	#downArrow:hover .shape {
-		stroke: white;
+  background-color: $darkGray;
+  color: $lighterGray;
+  background-image: url(https://res.cloudinary.com/lkaratun/image/upload/v1535470462/portfolio/toronto_bg_web.jpg);
+  background-size: cover;
+  background-position: bottom;
+  align-items: center;
+  justify-content: center;
 
-	}
+  #downArrow {
+    width: 150px;
+    height: 80px;
+
+    .shape {
+      fill: none;
+      stroke: hsl(208, 40%, 30%);
+      stroke-linecap: round;
+      stroke-linejoin: bevel;
+      stroke-width: 3px;
+    }
+  }
+
+  #downArrow:hover .shape {
+    stroke: white;
+  }
 }
 
 #photo {
-	display: block;
-	object-fit: scale-down;
-	object-position: 0 0;
-	width: 20%;
-	border-radius: 50%;
+  display: block;
+  object-fit: scale-down;
+  object-position: 0 0;
+  width: 20%;
+  border-radius: 50%;
 }
 
 #about {
-	padding: 0% 15%;
-	box-sizing: content-box;
-	justify-content: flex-start;
-	align-items: center;
-	#bio{
-	margin: 2rem 0;
-	width: 40em;
-	}
-	.card-group {
-		align-items: stretch;
-		width: 50em;
-	}
- .skills {
-	box-sizing: content-box;
-	 display: flex;
-	 flex-flow: row wrap;
-	 align-items: center;
-	 justify-content: flex-end;
-	 .skillCard{
-		box-sizing: content-box;
-		 background-color:$gray;
-		border: none;
-		 margin: 1vh;
-		 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);
-		}
-		.label{
-			margin-left: 0;
-			margin-right: auto;
-		 font-size: 1.1rem;
-		 font-weight: 700;
-	 }
-	 img{
-		 height: $logoImgHeight;
-		 padding: 0.2vw;
-		 box-sizing: content-box;
-		 
-	 	}
-	 }
-	#downArrow {
-	polyline.cls-1 {	
-		fill: none;
-		stroke: hsl(208, 40%, 30%) !important;
-		stroke-linecap: round;
-		stroke-linejoin: bevel;
-		stroke-width: 3px;
+  padding: 0% 15%;
+  box-sizing: content-box;
+  justify-content: flex-start;
+  align-items: center;
 
-		:hover {
-			stroke: white !important;
-		}
-	}
-}
+  #bio {
+    margin: 2rem 0;
+    width: 40em;
+  }
+
+  .card-group {
+    align-items: stretch;
+    width: 50em;
+  }
+
+  .skills {
+    box-sizing: content-box;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+
+    .skillCard {
+      box-sizing: content-box;
+      background-color: $gray;
+      border: none;
+      margin: 1vh;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
+    }
+
+    .label {
+      margin-left: 0;
+      margin-right: auto;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    img {
+      height: $logoImgHeight;
+      padding: 0.2vw;
+      box-sizing: content-box;
+    }
+  }
+
+  #downArrow {
+    polyline.cls-1 {
+      fill: none;
+      stroke: hsl(208, 40%, 30%) !important;
+      stroke-linecap: round;
+      stroke-linejoin: bevel;
+      stroke-width: 3px;
+
+      :hover {
+        stroke: white !important;
+      }
+    }
+  }
 }
 
 #projects {
+  background: $lighterGray;
 
+  .projectsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+  }
 
-	background: $lighterGray;
-	.projectsContainer {
-		display: flex;
-		flex-flow: row wrap;
-		align-items: stretch;
-		justify-content: center;
-				
-	}
-	.projectCard {
-		position: relative;
-		display: inline-flex;
-		flex-flow: column wrap;
-		justify-content: space-between;
-		width: $projectImgWidth;
-		height: auto;
-		box-sizing: content-box;
-		background-color:$gray;
-		margin: 1vh 1vh;
-		padding: 1vh 1vh;
-		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);		
-		img {
-			width: $projectImgWidth;
-			padding: 0.5vw;
-			box-sizing: border-box;
-		}
-		.overlay {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			background: $darkBlue;
-			opacity: 0.9;
-			transition: all 0.25s ease-out;
-			overflow: hidden;
-			.project-link {
-				opacity: 0;
-				transition: all 0.25s ease-out;
-			}
-			
-			.description {
-				width: 30vw;
-				height: 10rem;
-				left: 10%;
-				top: 30%;
-				position: absolute;
-				color: $lightBlue;
-				overflow: hidden;
-				font-size: 1rem;
-				.projectName {
-					font-size: 135%;
-					color: $lighterGray;
-				}
-			}
+  .projectCard {
+    position: relative;
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: $projectImgWidth;
+    height: auto;
+    box-sizing: content-box;
+    background-color: $gray;
+    margin: 1vh 1vh;
+    padding: 1vh 1vh;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
 
-			
-		}
-		// &:hover .overlay{
-		// 	width: 0;
-		// 	left: 100%;
-		// 	transition: all 0.2s ease-in-out;
-		// }		
-		&:hover {
-		.project-link{
-			opacity: 1;
-			transition: all 0.1s ease-out;
-		}
-		.overlay {
-			opacity: 0.95;
-			transition: all 0.2s ease-out;
-		}
-	}
-	}
+    img {
+      width: $projectImgWidth;
+      padding: 0.5vw;
+      box-sizing: border-box;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $darkBlue;
+      opacity: 0.9;
+      transition: all 0.25s ease-out;
+      overflow: hidden;
+
+      .project-link {
+        opacity: 0;
+        transition: all 0.25s ease-out;
+      }
+
+      .description {
+        width: 30vw;
+        height: 10rem;
+        left: 10%;
+        top: 30%;
+        position: absolute;
+        color: $lightBlue;
+        overflow: hidden;
+        font-size: 1rem;
+
+        .projectName {
+          font-size: 135%;
+          color: $lighterGray;
+        }
+      }
+    }
+
+    // &:hover .overlay{
+    // 	width: 0;
+    // 	left: 100%;
+    // 	transition: all 0.2s ease-in-out;
+    // }
+    &:hover {
+      .project-link {
+        opacity: 1;
+        transition: all 0.1s ease-out;
+      }
+
+      .overlay {
+        opacity: 0.95;
+        transition: all 0.2s ease-out;
+      }
+    }
+  }
 }
 
 #contacts {
-	align-items: center;
-	text-align: left;
-	position: relative;
-	justify-content: flex-start;
-	h2 {
-		margin-top: 3rem;
-	}
-	.subHeader {
-		display: flex;
-		flex-flow: row wrap;
-	}
-	a {
-		color: $graphite;
-		img, object {
-			width:1.5rem;
-			margin: 1rem;
-			vertical-align: middle;
-		}
-	}
-	a:hover {
-		color: $graphiteHighlight;
-		text-decoration: none;
-	}
+  align-items: center;
+  text-align: left;
+  position: relative;
+  justify-content: flex-start;
+
+  h2 {
+    margin-top: 3rem;
+  }
+
+  .subHeader {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  a {
+    color: $graphite;
+
+    img,
+    object {
+      width: 1.5rem;
+      margin: 1rem;
+      vertical-align: middle;
+    }
+  }
+
+  a:hover {
+    color: $graphiteHighlight;
+    text-decoration: none;
+  }
 }
 
 // Footer
 section:last-child::after {
-	content: "";
-	background: url(../toronto_skyline.png);
-	// background: url(http://res.cloudinary.com/lkaratun/image/upload/s--qsm14XaB--/q_jpegmini:2/v1535422706/portfolio/toronto-bg.jpg);
-	background-size: contain;
-	background-repeat: repeat-x;
-	background-position: bottom;
+  content: "";
+  background: url(../toronto_skyline.png);
+  // background: url(http://res.cloudinary.com/lkaratun/image/upload/s--qsm14XaB--/q_jpegmini:2/v1535422706/portfolio/toronto-bg.jpg);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: bottom;
   opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -1;  
+  z-index: -1;
 }
