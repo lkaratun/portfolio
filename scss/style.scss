@@ -36,7 +36,7 @@ html {
   margin: 0;
   padding: 0;
   @media screen and (max-aspect-ratio: 1/1) {
-    font-size: 28px;
+    font-size: 36px;
   }
 }
 
@@ -121,8 +121,15 @@ html {
   display: block;
   object-fit: scale-down;
   object-position: 0 0;
-  width: 20%;
+  width: 30%;
   border-radius: 50%;
+  margin: 2%;
+  float: left;
+  @media screen and (max-aspect-ratio: 1/1) {
+    width: 70%;
+    float: none;
+    margin: 0 auto 5% auto;
+  }
 }
 
 #about {
@@ -251,9 +258,7 @@ html {
 
 #contacts {
   align-items: center;
-  text-align: left;
   position: relative;
-  // justify-content: flex-start;
 
   h2 {
     margin-top: 3rem;
@@ -262,12 +267,11 @@ html {
   .subHeader {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
   }
 
   a {
     color: $graphite;
-
-    img,
     object {
       width: 1.5rem;
       margin: 1rem;
@@ -290,10 +294,10 @@ section:last-child::after {
   background-repeat: repeat-x;
   background-position: bottom;
   opacity: 0.2;
-  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
-  // z-index: 1;
+  z-index: 1;
+  height: 100px;
 }
