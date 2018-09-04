@@ -53,8 +53,6 @@ function handleArrowClick() {
 }
 
 function handleNavigationClick(e) {
-  console.log(handleNavigationClick);
-
   highlightLink(e.target);
   const scrollTarget = document.querySelector(e.target.getAttribute("href"));
 
@@ -62,10 +60,8 @@ function handleNavigationClick(e) {
 }
 
 function highlightLink(target) {
-  // console.log(highlightLink);
   restoreLinksAppearance(navLinks);
   target.style.textDecoration = "underline";
-  console.log("target", target);
 }
 function restoreLinksAppearance(links) {
   links.forEach(link => {
