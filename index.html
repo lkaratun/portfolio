@@ -6,7 +6,7 @@
     <title>Lev Karatun: full-stack web developer</title>
 
     <!-- Bootstrap -->
-    
+
     <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -20,11 +20,17 @@
     </noscript>
 
 
-    <!-- My CSS -->
-    <!-- <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript> -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- </noscript> -->
+
+    <script src="loadScripts.js"></script>
+    <!-- popper and jquery need to be loaded before Bootstrap so just load them syncronously -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" as="script"
+      onload="appendScript.call(this)">
+
 
     <!-- preload polyfill -->
     <script>
@@ -267,37 +273,6 @@
 
 
         </div>
-
-
-        <!-- <div class="skills">
-        <div class="label">Front-end technologies</div>
-        <div class="skillCard"><img src="logos/html5.svg" alt="HTML5"></div>
-        <div class="skillCard"><img src="logos/css3.svg" alt="CSS3"></div>
-        <div class="skillCard"><img src="logos/javascript.svg" alt="JavaScript"></div>
-        <div class="skillCard"><img src="logos/react_my.svg" alt="React"></div>
-        <div class="skillCard"><img src="logos/d3.svg" alt="D3"></div>
-      </div>
-      <div class="skills">
-        <div class="label">Back-end technologies</div>
-        <div class="skillCard"><img src="logos/nodejs.svg" alt="node.js"></div>
-        <div class="skillCard"><img src="logos/express_square.svg" alt="express.js"></div>
-        <div class="skillCard"><img src="logos/mongodb_square.svg" alt="MongoDB"></div>
-        <div class="skillCard"><img src="logos/mysql.svg" alt="MySql"></div>
-      </div>
-      <div class="skills">
-        <div class="label">Programming languages</div>
-        <div class="skillCard"><img src="logos/python_square.svg" alt="Python"></div>
-        <div class="skillCard"><img src="logos/c.svg" alt="C++"></div>
-      </div>
-      <div class="skills">
-        <div class="label">Tools</div>
-        <div class="skillCard"><img src="logos/git_square.svg" alt="Git"></div>
-        <div class="skillCard"><img src="logos/aws_ec2_my.svg" alt="AWS EC2"></div>
-        <div class="skillCard"><img src="logos/nginx.svg" alt="Nginx"></div>
-        <div class="skillCard"><img src="logos/babel_square.svg" alt="Babel"></div>
-        <div class="skillCard"><img src="logos/sass.svg" alt="Sass"></div>
-      </div> -->
-
       </section>
       <section id="projects" class="page">
         <div class="header">Here are the projects I implemented while learning web development</div>
@@ -369,6 +344,8 @@
     </div>
 
     <script src="app.js"></script>
+
+
   </body>
 
 </html>
