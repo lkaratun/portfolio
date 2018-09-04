@@ -22,6 +22,12 @@ html {
   margin: 0;
   padding: 0;
 }
+@media screen and (max-aspect-ratio: 1/1) {
+  body,
+html {
+    font-size: 20px;
+  }
+}
 
 .navbar {
   top: -70px;
@@ -108,47 +114,20 @@ html {
   max-width: 45rem;
 }
 #about .card-group {
-  align-items: stretch !important;
-  width: 100%;
-}
-#about .card {
-  min-width: 15rem;
-  width: 100%;
-}
-#about .skills {
-  box-sizing: content-box;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  justify-content: flex-end;
+  width: 100%;
 }
-#about .skills .skillCard {
-  box-sizing: content-box;
-  background-color: #e0e0e0;
-  border: none;
-  margin: 1vh;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
+#about .card-group .card {
+  display: block;
+  min-width: 15rem;
+  flex-shrink: 0;
 }
-#about .skills .label {
-  margin-left: 0;
-  margin-right: auto;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-#about .skills img {
-  height: 6vh;
-  padding: 0.2vw;
-  box-sizing: content-box;
-}
-#about #downArrow polyline.cls-1 {
-  fill: none;
-  stroke: #2e4f6b !important;
-  stroke-linecap: round;
-  stroke-linejoin: bevel;
-  stroke-width: 3px;
-}
-#about #downArrow polyline.cls-1 :hover {
-  stroke: white !important;
+@media screen and (max-aspect-ratio: 1/1) {
+  #about .card-group .card {
+    flex-shrink: 0;
+    min-width: 60%;
+  }
 }
 
 #projects {
@@ -162,7 +141,7 @@ html {
 }
 #projects .projectCard {
   position: relative;
-  display: inline-flex;
+  display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   width: 35vw;
@@ -182,6 +161,7 @@ html {
 @media screen and (max-aspect-ratio: 1/1) {
   #projects .projectCard {
     height: 60vw;
+    width: 60vw;
   }
 }
 #projects .projectCard img {
