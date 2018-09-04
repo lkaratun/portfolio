@@ -23,13 +23,6 @@ html {
   padding: 0;
 }
 
-.scrolling-box {
-  background-color: #ebebeb;
-  display: block;
-  height: 100vh;
-  text-align: center;
-}
-
 .navbar {
   top: -70px;
   transition: top 0.2s ease-out;
@@ -46,12 +39,14 @@ html {
 }
 
 .page {
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   color: #393528;
+  background-color: #ebebeb;
+  text-align: center;
 }
 .page .subHeader {
   font-size: 1.1rem;
@@ -103,18 +98,22 @@ html {
 }
 
 #about {
-  padding: 0% 15%;
+  padding: 0% 5%;
   box-sizing: content-box;
   justify-content: flex-start;
   align-items: center;
 }
 #about #bio {
   margin: 2rem 0;
-  width: 40em;
+  max-width: 45rem;
 }
 #about .card-group {
-  align-items: stretch;
-  width: 50em;
+  align-items: stretch !important;
+  width: 100%;
+}
+#about .card {
+  min-width: 15rem;
+  width: 100%;
 }
 #about .skills {
   box-sizing: content-box;
@@ -164,15 +163,26 @@ html {
 #projects .projectCard {
   position: relative;
   display: inline-flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   width: 35vw;
-  height: auto;
+  height: 25vw;
+  min-width: 25rem;
   box-sizing: content-box;
   background-color: #e0e0e0;
   margin: 1vh 1vh;
   padding: 1vh 1vh;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
+}
+@media screen and (max-aspect-ratio: 3/2) {
+  #projects .projectCard {
+    height: 35vw;
+  }
+}
+@media screen and (max-aspect-ratio: 1/1) {
+  #projects .projectCard {
+    height: 60vw;
+  }
 }
 #projects .projectCard img {
   width: 35vw;
@@ -195,14 +205,20 @@ html {
   transition: all 0.25s ease-out;
 }
 #projects .projectCard .overlay .description {
-  width: 30vw;
-  height: 10rem;
+  width: 80%;
+  height: 100%;
   left: 10%;
   top: 30%;
   position: absolute;
   color: #ebf3fa;
   overflow: hidden;
   font-size: 1rem;
+}
+@media screen and (max-aspect-ratio: 1) {
+  #projects .projectCard .overlay .description {
+    top: 5%;
+    left: 5%;
+  }
 }
 #projects .projectCard .overlay .description .projectName {
   font-size: 135%;

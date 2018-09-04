@@ -15,16 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
-  console.log("loaded");
-
   const sections = document.querySelectorAll("section");
   const sectionsCoords = [];
   sections.forEach(section => {
     const navBarHeight = navBar.getBoundingClientRect().height;
-    console.log("navBarHeight", navBarHeight);
     sectionsCoords.push(section.offsetTop);
     if (section.id !== "home") {
-      section.style.height = `${section.getBoundingClientRect().height - navBarHeight}px`;
+      section.style.minHeight = `${section.getBoundingClientRect().height - navBarHeight}px`;
     }
   });
   for (let i = 0; i < sectionsCoords.length - 1; i++) {
