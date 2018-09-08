@@ -30,8 +30,9 @@ html {
 }
 
 .navbar {
-  top: -70px;
   transition: top 0.2s ease-out;
+  position: sticky;
+  top: 0;
 }
 .navbar .navbar-nav .nav-link {
   color: #ebebeb;

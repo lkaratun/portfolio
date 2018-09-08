@@ -70,18 +70,8 @@ function restoreLinksAppearance(links) {
 }
 
 window.onscroll = () => {
-  setNavBarVisibility();
   handleScroll();
 };
-const scrollThreshold = window.innerHeight / 4;
-function setNavBarVisibility() {
-  const navBarHeight = navBar.getBoundingClientRect().height;
-  if (window.pageYOffset > scrollThreshold) {
-    navBar.style.top = "0";
-  } else {
-    navBar.style.top = `-${navBarHeight}px`;
-  }
-}
 
 function smoothScroll(target, duration) {
   const navBarHeight = navBar.getBoundingClientRect().height;
