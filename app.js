@@ -46,17 +46,18 @@ function determineCorrectSectionIndex() {
   return sectionsBreakpoints.length;
 }
 
-function handleArrowClick() {
+function handleArrowClick(e) {
+  e.preventDefault();
   highlightLink(document.querySelector("#about-link"));
   const scrollTarget = document.querySelector("#about");
-  smoothScroll(scrollTarget, 300);
+  smoothScrollNative(scrollTarget);
 }
 
 function handleNavigationClick(e) {
+  e.preventDefault();
   highlightLink(e.target);
   const scrollTarget = document.querySelector(e.target.getAttribute("href"));
-
-  smoothScroll(scrollTarget, 300);
+  smoothScrollNative(scrollTarget);
 }
 
 function highlightLink(target) {
@@ -73,6 +74,7 @@ window.onscroll = () => {
   setNavBarVisibility();
   handleScroll();
 };
+
 const scrollThreshold = window.innerHeight / 4;
 function setNavBarVisibility() {
   const navBarHeight = navBar.getBoundingClientRect().height;
@@ -83,29 +85,13 @@ function setNavBarVisibility() {
   }
 }
 
-function smoothScroll(target, duration) {
+function smoothScrollNative(target) {
   const navBarHeight = navBar.getBoundingClientRect().height;
   const targetPosition = target.getBoundingClientRect().top - navBarHeight;
-
-  const startPosition = window.pageYOffset;
-
-  let startTime = null;
-  function animation(currentTime) {
-    if (startTime === null) {
-      startTime = currentTime;
-    }
-    const timeElapsed = currentTime - startTime;
-    const run = easeOutQuad(timeElapsed, startPosition, targetPosition, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) {
-      window.requestAnimationFrame(animation);
-    }
-  }
-
-  function easeOutQuad(t, b, c, d) {
-    t /= d;
-    return -c * t * (t - 2) + b;
-  }
-
-  window.requestAnimationFrame(animation);
+  console.log("targetPosition", targetPosition);
+  console.log("window.pageYOffset", window.pageYOffset);
+  window.scroll({
+    top: window.pageYOffset + targetPosition,
+    behavior: "smooth"
+  });
 }

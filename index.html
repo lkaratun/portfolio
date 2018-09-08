@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="loadScripts.js"></script>
-    <!-- popper and jquery need to be loaded before Bootstrap so just load them syncronously -->
+    <!-- popper and jquery need to be loaded before Bootstrap so just load them synchronously -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
       crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -157,194 +157,184 @@
   </head>
 
   <body>
-    <div class="scrolling-box">
-      <nav id="navbar" class="navbar navbar-dark bg-dark fixed-top navbar-expand-md p-0">
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav w-100 d-flex justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link scroll-link" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a id="about-link" class="nav-link scroll-link" href="#about">About me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link scroll-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link scroll-link" href="#contacts">Contacts</a>
-              </li>
-            </ul>
-          </div>
+    <nav id="navbar" class="navbar navbar-dark bg-dark fixed-top navbar-expand-md p-0">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 d-flex justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a id="about-link" class="nav-link scroll-link" href="#about">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#contacts">Contacts</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <section id="home" class="page">
-        <h1>Hi! My name is Lev.</h1>
-        <h2>I'm a full-stack web developer from Toronto.</h2>
-        <a href="#about">
-          <svg id="downArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 26.38">
-            <defs>
-            </defs>
-            <title>About me</title>
-            <polyline class="shape" points="1.5,1.5 51.5,24.88 101.5,1.5" />
-          </svg>
+    <section id="home" class="page">
+      <h1>Hi! My name is Lev.</h1>
+      <h2>I'm a full-stack web developer from Toronto.</h2>
+      <a href="#about">
+        <svg id="downArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 26.38">
+          <defs>
+          </defs>
+          <title>About me</title>
+          <polyline class="shape" points="1.5,1.5 51.5,24.88 101.5,1.5" />
+        </svg>
+      </a>
+    </section>
+
+    <section id="about" class="page">
+      <div class="subHeader" id="bio">
+        <img id="photo" src="https://res.cloudinary.com/lkaratun/image/upload/q_80/v1535469370/portfolio/linkedin_BW_web.jpg"
+          alt="my photo"> I'm a programmer with 5 years of experience of teaching Python to university
+        students, as well as writing C++ as part of my PhD research. I taught myself JavaScript using
+        online platforms such as EdX and Udemy and currently looking for a job in web development.<br><a
+          href="./Lev_Karatun_resume.pdf" target="_blank" download>My resume
         </a>
-      </section>
+      </div>
 
-      <section id="about" class="page">
-        <div class="subHeader" id="bio">
-          <img id="photo" src="https://res.cloudinary.com/lkaratun/image/upload/q_80/v1535469370/portfolio/linkedin_BW_web.jpg"
-            alt="my photo"> I'm a programmer with 5 years of experience of teaching Python to
-          university students, as well as writing C++ as part of my PhD research. I taught myself JavaScript
-          using online platforms such as EdX and Udemy and currently looking for a job in web development.<br><a
-            href="./Lev_Karatun_resume.pdf" target="_blank" download>My resume
+      <h2>My skills</h2>
+      <div class="card-group">
+        <div class="card bg-light m-1">
+          <h5 class="card-header">Front end</h5>
+          <div class="card-body">
+            <table class="table">
+              <tbody class="">
+                <tr scope="row">
+                  <td class="border-0">HTML5</td>
+                  <td class="border-0">React</td>
+                </tr>
+                <tr>
+                  <td>CSS3</td>
+                  <td>d3</td>
+                </tr>
+                <tr>
+                  <td>JavaScript</td>
+                  <td>Bootstrap</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card bg-light m-1">
+          <h5 class="card-header">Back end</h5>
+          <div class="card-body">
+            <table class="table">
+              <tbody class="">
+                <tr scope="row">
+                  <td class="border-0">node.js</td>
+                  <td class="border-0">Express</td>
+                </tr>
+                <tr>
+                  <td>MongoDB</td>
+                  <td>SQL</td>
+                </tr>
+                <tr>
+                  <td>Python</td>
+                  <td>C++</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card bg-light m-1">
+          <h5 class="card-header">Tools</h5>
+          <div class="card-body">
+            <table class="table">
+              <tbody class="">
+                <tr scope="row">
+                  <td class="border-0">Git</td>
+                  <td class="border-0">AWS EC2</td>
+                </tr>
+                <tr>
+                  <td>Nginx</td>
+                  <td>SASS</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+    <section id="projects" class="page">
+      <div class="header">Here are the projects I implemented while learning web development</div>
+      <div class="projectsContainer">
+        <div class="projectCard">
+          <a href="https://levkaratun.com/movies_dashboard" target="_blank">
+            <img src="https://res.cloudinary.com/lkaratun/image/upload/v1535470091/portfolio/movies_web.png" alt="Movies project"
+              title="Open project in a new tab">
           </a>
-        </div>
-
-        <h2>My skills</h2>
-        <div class="card-group">
-          <div class="card bg-light m-1">
-            <h5 class="card-header">Front end</h5>
-            <div class="card-body">
-              <table class="table">
-                <tbody class="">
-                  <tr scope="row">
-                    <td class="border-0">HTML5</td>
-                    <td class="border-0">React</td>
-                  </tr>
-                  <tr>
-                    <td>CSS3</td>
-                    <td>d3</td>
-                  </tr>
-                  <tr>
-                    <td>JavaScript</td>
-                    <td>Bootstrap</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="card bg-light m-1">
-            <h5 class="card-header">Back end</h5>
-            <div class="card-body">
-              <table class="table">
-                <tbody class="">
-                  <tr scope="row">
-                    <td class="border-0">node.js</td>
-                    <td class="border-0">Express</td>
-                  </tr>
-                  <tr>
-                    <td>MongoDB</td>
-                    <td>SQL</td>
-                  </tr>
-                  <tr>
-                    <td>Python</td>
-                    <td>C++</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="card bg-light m-1">
-            <h5 class="card-header">Tools</h5>
-            <div class="card-body">
-              <table class="table">
-                <tbody class="">
-                  <tr scope="row">
-                    <td class="border-0">Git</td>
-                    <td class="border-0">AWS EC2</td>
-                  </tr>
-                  <tr>
-                    <td>Nginx</td>
-                    <td>SASS</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-
-        </div>
-      </section>
-      <section id="projects" class="page">
-        <div class="header">Here are the projects I implemented while learning web development</div>
-        <div class="projectsContainer">
-          <div class="projectCard">
-            <a href="https://levkaratun.com/movies_dashboard" target="_blank">
-              <img src="https://res.cloudinary.com/lkaratun/image/upload/v1535470091/portfolio/movies_web.png" alt="Movies project"
-                title="Open project in a new tab">
-            </a>
-            <div class="overlay">
-              <p class="description"><span class="projectName">Movies data visualization</span><br>d3
-                + vanilla JS on the front end<br>MongoDB + Express on the back end<br>
-                <a href="https://levkaratun.com/movies_dashboard" class="project-link btn btn-dark active m-4" target="_blank">View
-                  result
-                </a>
-                <a href="https://github.com/lkaratun/visualization_dashboard" class="project-link btn btn-dark active m-4"
-                  target="_blank">View code
-                </a>
-              </p>
-            </div>
-
-          </div>
-          <div class="projectCard">
-            <a href="https://levkaratun.com/memory_game" target="_blank">
-              <img src="https://res.cloudinary.com/lkaratun/image/upload/v1535470091/portfolio/memory_game_web.png"
-                alt="Memory game project" title="Open project in a new tab">
-            </a>
-            <div class="overlay">
-
-              <p class="description"><span class="projectName">Memory card game</span><br>React on the
-                front end<br><br>
-                <a href="https://levkaratun.com/memory_game/" class="project-link btn btn-dark active m-4" target="_blank">View
-                  result
-                </a>
-                <a href="https://github.com/lkaratun/memory_game" class="project-link btn btn-dark active m-4" target="_blank">View
-                  code
-                </a>
-              </p>
-            </div>
-
+          <div class="overlay">
+            <p class="description"><span class="projectName">Movies data visualization</span><br>d3 +
+              vanilla JS on the front end<br>MongoDB + Express on the back end<br>
+              <a href="https://levkaratun.com/movies_dashboard" class="project-link btn btn-dark active m-4" target="_blank">View
+                result
+              </a>
+              <a href="https://github.com/lkaratun/visualization_dashboard" class="project-link btn btn-dark active m-4"
+                target="_blank">View code
+              </a>
+            </p>
           </div>
 
         </div>
+        <div class="projectCard">
+          <a href="https://levkaratun.com/memory_game" target="_blank">
+            <img src="https://res.cloudinary.com/lkaratun/image/upload/v1535470091/portfolio/memory_game_web.png"
+              alt="Memory game project" title="Open project in a new tab">
+          </a>
+          <div class="overlay">
 
-      </section>
-
-
-      <section id="contacts" class="page">
-        <h2>Let's get in touch!</h2>
-        <div class="subHeader">
-          <a href="mailto:lev.karatun@gmail.com"> <object type="image/svg+xml" data="logos/email.svg"
-              class="logo">
-              Email logo
-            </object>E-mail</a>
-          <a href="https://www.linkedin.com/in/lev-karatun-778a67155/"> <object type="image/svg+xml"
-              data="logos/linkedin.svg" class="logo">
-              LinkedIn logo
-            </object>LinkedIn</a>
-          <a href="https://github.com/lkaratun"> <object type="image/svg+xml" data="logos/github.svg"
-              class="logo">
-              GitHub logo
-            </object>GitHub</a>
-
-
+            <p class="description"><span class="projectName">Memory card game</span><br>React on the
+              front end<br><br>
+              <a href="https://levkaratun.com/memory_game/" class="project-link btn btn-dark active m-4" target="_blank">View
+                result
+              </a>
+              <a href="https://github.com/lkaratun/memory_game" class="project-link btn btn-dark active m-4" target="_blank">View
+                code
+              </a>
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
 
-    </div>
+    <section id="contacts" class="page">
+      <h2>Let's get in touch!</h2>
+      <div class="subHeader">
+        <a href="mailto:lev.karatun@gmail.com"> <object type="image/svg+xml" data="logos/email.svg" class="logo">
+            Email logo
+          </object>E-mail</a>
+        <a href="https://www.linkedin.com/in/lev-karatun-778a67155/"> <object type="image/svg+xml" data="logos/linkedin.svg"
+            class="logo">
+            LinkedIn logo
+          </object>LinkedIn</a>
+        <a href="https://github.com/lkaratun"> <object type="image/svg+xml" data="logos/github.svg" class="logo">
+            GitHub logo
+          </object>GitHub</a>
+
+
+      </div>
+    </section>
+
 
     <script src="app.js"></script>
-
-
   </body>
 
 </html>
