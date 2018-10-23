@@ -181,11 +181,19 @@ html {
 #projects .projectCard article {
   text-align: left;
 }
-#projects .projectCard img {
+#projects .projectCard aside {
   width: 50%;
   float: right;
   padding: 0.5vw;
   box-sizing: border-box;
+}
+#projects .projectCard aside a {
+  margin: 0.5em;
+  display: inline-block;
+  font-size: 1.3em;
+}
+#projects .projectCard img {
+  width: 100%;
 }
 #projects .projectCard .overlay {
   position: absolute;

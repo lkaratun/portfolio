@@ -204,11 +204,19 @@ html {
     article {
       text-align: left;
     }
-    img {
+    aside {
       width: 50%;
       float: right;
       padding: 0.5vw;
       box-sizing: border-box;
+      a {
+        margin: 0.5em;
+        display: inline-block;
+        font-size: 1.3em;
+      }
+    }
+    img {
+      width: 100%;
     }
 
     .overlay {
