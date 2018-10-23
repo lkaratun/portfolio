@@ -4,7 +4,7 @@
   <head>
 
     <title>Lev Karatun: full-stack web developer</title>
-
+    <meta charset="utf-8">
     <!-- Bootstrap -->
 
     <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -310,7 +310,7 @@
             Dashboard consisting of four main sections:
             <ol>
               <li>
-                A scatter plot of popularity vs budget. Display movie details on hover and
+                A scatter plot of popularity vs budget. Display movie details on hover and
                 click
               </li>
               <li>
@@ -323,39 +323,38 @@
                 countries by clicking on the map
               </li>
               <li>
-                A bar chart showing genres of the movies. Filter by one or
+                A bar chart showing genres of the movies. Filter by one or
                 multiple genres by clicking on the bar chart
               </li>
             </ol>
 
             <h5>Choice of technologies</h5>
             <ul>
-              <li>The visualizations are created using <strong> <a href="https://d3js.org/" target="_blank">D3</a></strong>
-                &mdash; an open-source library allowing to build different types of
+              <li>The visualizations are created using <b> <a href="https://d3js.org/" target="_blank">D3</a></b>
+                - an open-source library allowing to build different types of
                 complex graphs.</li>
               <li>Due to the simple nature of the page, I decided not
                 to use front-end frameworks and stick with vanilla HTML
                 and <b><a href="https://sass-lang.com/" target="_blank">SASS</a></b>
-                compiled into CSS.</li>
+                compiled into CSS.</li>
               <li>It is easier to store movie data in documents format
-                rather than in tables, so I chose to use <strong> <a href="https://www.mongodb.com"
-                    target="_blank">MongoDB</a></strong>
-                on the back-end. </li>
+                rather than in tables, so I chose to use <b> <a href="https://www.mongodb.com"
+                    target="_blank">MongoDB</a></b>
+                on the back-end.</li>
               <li>Data is pulled from the back end API -- a MongoDB
-                driver + <strong><a href="https://expressjs.com/" target="_blank"> Express</a></strong>
-                application running on <strong><a href="https://nodejs.org/en/" target="_blank">
-                    node.js</a></strong>. </li>
+                driver + <b><a href="https://expressjs.com/" target="_blank"> Express</a></b>
+                application running on <b><a href="https://nodejs.org/en/" target="_blank">
+                    node.js</a></b>.</li>
               <li>The application is built using <b><a href="https://parceljs.org/" target="_blank">
                     parcel.js</a></b>
-                and hosted on a <b><a href="https://aws.amazon.com/ec2/" target="_blank"> AWS EC2</a></b>
+                and hosted on a <b><a href="https://aws.amazon.com/ec2/" target="_blank"> AWS EC2</a></b>
                 instance
                 running <b><a href="https://www.nginx.com/" target="_blank">Nginx</a> </b> web
                 server.</li>
-              <li>Continuous integration is set up using <strong><a href="https://jenkins.io/"
-                    target="_blank">Jenkins</a>
-                </strong> and
-                <strong><a href="http://github.com" target="_blank">GitHub</a> </strong> web
-                hooks. </li>
+              <li>Continuous integration is set up using <b><a href="https://jenkins.io/" target="_blank">Jenkins</a>
+                </b> and
+                <b><a href="http://github.com" target="_blank">GitHub</a> </b> web
+                hooks.</li>
             </ul>
             <h5 class="inline-header">Challenges</h5>
             <input type="checkbox" class="read-more-state" id="post-1" />
@@ -363,7 +362,7 @@
 
             <ol>
               <li>
-                <strong>Data formatting</strong>
+                <b>Data formatting</b>
                 <div class="read-more-target">
                   The data used were acquired from <a href="https://www.themoviedb.org/" target="_blank">TMDB</a>
                   in CSV format,
@@ -372,9 +371,9 @@
                   (such as movie plot) contained single, double quotation marks, as well as
                   commas.
                   Additionally, the object keys were wrapped in single quotes: this made it
-                  impossible to parse the file as JSON as is. 
+                  impossible to parse the file as JSON as is.
                   To solve this problem, I reformatted the file in
-                  three steps: 
+                  three steps:
 
                   <ol>
                     <li>
@@ -387,9 +386,9 @@
                       quotes that wrapped individual fields.
                     </li>
                     <li>
-                      Using a regular expression, replaced single
+                      Using a regular expression, replaced single
                       quotes that wrapped object keys with double quotes, without replacing
-                      the apostrophes. 
+                      the apostrophes.
                     </li>
                     <li>
                       Wrote a script to read the resulting DSV file
@@ -400,7 +399,7 @@
               </li>
 
               <li>
-                <strong>Performance tuning</strong>
+                <b>Performance tuning</b>
                 <div class="read-more-target">When a big time interval was chosen
                   and no
                   other
@@ -427,7 +426,7 @@
                       delay
                       when retrieving the movie details, but significantly decreased page load
                       time
-                      and improved general responsiveness. 
+                      and improved general responsiveness.
                     </li>
                     <li>
                       Delegate processing of data to the MongoDB
@@ -435,13 +434,13 @@
                       each
                       country, count the movies per country in the DB and only transfer the
                       final
-                      number. 
+                      number.
                     </li>
                     <li>
-                      Set up indices on the DB to speed up reads: 
+                      Set up indices on the DB to speed up reads:
                       since new data in never written to the DB, there was no downside to
                       adding
-                      several indices to the collection. 
+                      several indices to the collection.
                     </li>
                     <li>
                       Cache data on front-end: after each request to
@@ -452,8 +451,8 @@
                       part.
                     </li>
                   </ol>
-                  As a result, the initial <strong>page load time decreased from 2 to 0.5 seconds</strong>,
-                  additional requests - from <strong>0.5-1.5 to 0.2-0.5 seconds</strong>
+                  As a result, the initial <b>page load time decreased from 2 to 0.5 seconds</b>,
+                  additional requests - from <b>0.5-1.5 to 0.2-0.5 seconds</b>
                   (depending
                   on the
                   amount
@@ -482,49 +481,44 @@
             <h5>Approach</h5>
             I built a simple memory card game that can improve your memory and is easy to start
             playing
-            The game board contains cards of initially hidden color. The goal of the game is
+            The game board contains cards of initially hidden color. The goal of the game is
             finding card
             pairs or matching color by clicking the cards.
 
             <h5> Choice of technologies</h5>
-            The game is built using <strong><a href="https://reactjs.org/" target="_blank">React</a>
-            </strong>,<strong> </strong>bootstrapped
-            using <strong><a href="https://github.com/facebook/create-react-app" target="_blank">create-react-app</a></strong>,
-            and hosted on a <strong><a href="https://aws.amazon.com/ec2/" target="_blank">AWS EC2</a>
-            </strong>
-            instance running <strong><a href="https://www.nginx.com/" target="_blank"> Nginx</a></strong>
-            web
-            server. <br>
-            Continuous integration is set up using <strong><a href="https://jenkins.io/" target="_blank">
-                Jenkins</a></strong>
-            and <strong><a href="https://github.com/" target="_blank"> GitHub</a></strong> web
-            hooks. 
+            The game is built using <b><a href="https://reactjs.org/" target="_blank">React</a></b>,
+            bootstrapped
+            using <b><a href="https://github.com/facebook/create-react-app" target="_blank">create-react-app</a></b>,
+            and hosted on a <b><a href="https://aws.amazon.com/ec2/" target="_blank">AWS EC2</a></b>
+            instance running <b><a href="https://www.nginx.com/" target="_blank"> Nginx</a></b>
+            web server.<br>
+            Continuous integration is set up using <b><a href="https://jenkins.io/" target="_blank">
+                Jenkins</a></b>
+            and <b><a href="https://github.com/" target="_blank"> GitHub</a></b> web
+            hooks.
             <br />
             <h5>Challenges</h5>
             <ol>
               <li>
-                <strong>Adjustable game difficulty.</strong>In order to offer some additional
-                challenge
-                for
+                <b>Adjustable game difficulty.</b>In order to offer some additional challenge for
                 the
                 memory ninjas out there, I implemented three difficulty levels: easy, medium,
                 hard. Switching the difficulty changes the number of cards on the board to 16,
-                24, and 32 respectively. Cards sizing is adjusted accordingly. 
-              </li>
+                24, and 32 respectively. Cards sizing is adjusted accordingly.</li>
               <li>
-                <strong>Making the page mobile-friendly.</strong> By means
+                <b>Making the page mobile-friendly.</b> By means
                 of media queries, the cards size is increased on smaller devices.
               </li>
               <li>
-                <strong>Win condition.</strong> Every time the user finds a matching pair, the
+                <b>Win condition.</b> Every time the user finds a matching pair, the
                 number
                 of
                 opened cards is increased by two. When it reaches the total number of cards, a
-                win pop-up is displayed to the user. 
+                win pop-up is displayed to the user.
               </li>
               <li>
-                <strong>User experience.</strong> Smooth transitions and
-                animations are used in order to create a nice user experience. 
+                <b>User experience.</b> Smooth transitions and
+                animations are used in order to create a nice user experience.
               </li>
             </ol>
           </article>
