@@ -1,7 +1,7 @@
 @font-face {
   font-family: "DIN";
+  font-display: swap;
   src: url("../fonts/din1451alt.ttf") format("truetype");
-  /* Safari, Android, iOS */
 }
 ::-webkit-scrollbar {
   width: 0.7vw;
@@ -140,6 +140,8 @@ html {
 }
 
 #projects {
+  height: auto;
+  min-height: 50vh;
   background: whitesmoke;
 }
 #projects .projectsContainer {
@@ -148,33 +150,40 @@ html {
   align-items: stretch;
   justify-content: center;
 }
+#projects h3 {
+  min-width: 30vw;
+  margin: 1rem;
+}
 #projects .projectCard {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  width: 35vw;
-  height: 25vw;
+  width: 70vw;
   min-width: 25rem;
   box-sizing: content-box;
-  background-color: #e0e0e0;
-  margin: 1vh 1vh;
-  padding: 1vh 1vh;
+  background-color: #ebebeb;
+  margin: 1vh 1vh 3vh 1vh;
+  padding: 1vh 2vh 1vh 4vh;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
 }
-@media screen and (max-aspect-ratio: 3/2) {
-  #projects .projectCard {
-    height: 35vw;
-  }
+#projects .projectCard ul,
+#projects .projectCard ol {
+  padding-left: 1em;
+  box-sizing: border-box;
 }
-@media screen and (max-aspect-ratio: 1/1) {
-  #projects .projectCard {
-    height: 60vw;
-    width: 60vw;
-  }
+#projects .projectCard label,
+#projects .projectCard .inline-header {
+  display: inline;
+}
+#projects .projectCard h5 {
+  margin: 0.5rem 1rem;
+}
+#projects .projectCard a {
+  color: #2e4f6b;
+}
+#projects .projectCard article {
+  text-align: left;
 }
 #projects .projectCard img {
-  width: 35vw;
+  width: 50%;
+  float: right;
   padding: 0.5vw;
   box-sizing: border-box;
 }
@@ -225,9 +234,10 @@ html {
 #contacts {
   align-items: center;
   position: relative;
+  min-height: 40vh;
 }
 #contacts h2 {
-  margin-top: 3rem;
+  margin-top: -3rem;
 }
 #contacts .subHeader {
   display: flex;
@@ -247,7 +257,7 @@ html {
   text-decoration: none;
 }
 
-section:last-child::after {
+#contacts::after {
   content: "";
   background: url(../toronto_skyline.png);
   background-size: contain;

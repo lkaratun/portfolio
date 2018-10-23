@@ -8,14 +8,13 @@ $scrollBarWidth: 0.7vw;
 $darkBlue: hsl(208, 40%, 30%);
 $lightBlue: hsl(208, 60%, 95%);
 $logoImgHeight: 6vh;
-$projectImgWidth: 35vw;
+$projectImgWidth: 70vw;
 $projectImgHeight: 25vw;
 
 @font-face {
   font-family: "DIN";
   font-display: swap;
   src: url("../fonts/din1451alt.ttf") format("truetype");
-  /* Safari, Android, iOS */
 }
 
 ::-webkit-scrollbar {
@@ -153,6 +152,7 @@ html {
       display: block;
       min-width: 15rem;
       flex-shrink: 0;
+
       @media screen and (max-aspect-ratio: 1/1) {
         flex-shrink: 0;
         min-width: 60%;
@@ -162,6 +162,8 @@ html {
 }
 
 #projects {
+  height: auto;
+  min-height: 50vh;
   background: $lighterGray;
 
   .projectsContainer {
@@ -171,31 +173,40 @@ html {
     justify-content: center;
   }
 
+  h3 {
+    min-width: 30vw;
+    margin: 1rem;
+  }
   .projectCard {
-    position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
     width: $projectImgWidth;
-    height: $projectImgHeight;
     min-width: 25rem;
     box-sizing: content-box;
-    background-color: $gray;
-    margin: 1vh 1vh;
-    padding: 1vh 1vh;
+    background-color: $lightGray;
+    margin: 1vh 1vh 3vh 1vh;
+    padding: 1vh 2vh 1vh 4vh;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
 
-    @media screen and (max-aspect-ratio: 3/2) {
-      height: 35vw;
+    ul,
+    ol {
+      padding-left: 1em;
+      box-sizing: border-box;
     }
-
-    @media screen and (max-aspect-ratio: 1/1) {
-      height: 60vw;
-      width: 60vw;
+    label,
+    .inline-header {
+      display: inline;
     }
-
+    h5 {
+      margin: 0.5rem 1rem;
+    }
+    a {
+      color: $darkBlue;
+    }
+    article {
+      text-align: left;
+    }
     img {
-      width: $projectImgWidth;
+      width: 50%;
+      float: right;
       padding: 0.5vw;
       box-sizing: border-box;
     }
@@ -260,9 +271,10 @@ html {
 #contacts {
   align-items: center;
   position: relative;
+  min-height: 40vh;
 
   h2 {
-    margin-top: 3rem;
+    margin-top: -3rem;
   }
 
   .subHeader {
@@ -287,7 +299,7 @@ html {
 }
 
 // Footer
-section:last-child::after {
+#contacts::after {
   content: "";
   background: url(../toronto_skyline.png);
   // background: url(http://res.cloudinary.com/lkaratun/image/upload/s--qsm14XaB--/q_jpegmini:2/v1535422706/portfolio/toronto-bg.jpg);
