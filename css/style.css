@@ -59,6 +59,9 @@ html {
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
+.page .subHeader div {
+  margin-top: 1.5em;
+}
 .page .header {
   font-size: 1.25rem;
   margin-bottom: 2rem;
@@ -125,7 +128,7 @@ html {
 #about .card-group {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  width: 70vw;
 }
 #about .card-group .card {
   display: block;
@@ -173,7 +176,7 @@ html {
   display: inline;
 }
 #projects .projectCard h5 {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 1rem 0 1rem;
 }
 #projects .projectCard a {
   color: #2e4f6b;
@@ -240,17 +243,17 @@ html {
 }
 
 #contacts {
-  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   position: relative;
   min-height: 40vh;
 }
-#contacts h2 {
-  margin-top: -3rem;
+#contacts h4 {
+  margin-top: 2rem;
 }
 #contacts .subHeader {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  margin: 0;
 }
 #contacts a {
   color: #393528;
