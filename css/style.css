@@ -126,6 +126,9 @@ html {
   margin: 2rem 0;
   max-width: 45rem;
 }
+#about #bio a {
+  color: #2e4f6b;
+}
 #about .card-group {
   display: flex;
   flex-flow: row wrap;
