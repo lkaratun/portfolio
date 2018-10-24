@@ -21,11 +21,12 @@ body,
 html {
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 @media screen and (max-aspect-ratio: 1/1) {
   body,
 html {
-    font-size: 36px;
+    font-size: 1.75rem;
   }
 }
 
@@ -129,6 +130,7 @@ html {
   display: flex;
   flex-flow: row wrap;
   width: 70vw;
+  margin-bottom: 5vh;
 }
 #about .card-group .card {
   display: block;
@@ -140,6 +142,9 @@ html {
     flex-shrink: 0;
     min-width: 60%;
   }
+}
+#about .card-group table.table {
+  margin-bottom: 0;
 }
 
 #projects {
@@ -160,7 +165,7 @@ html {
 #projects .projectCard {
   width: 70vw;
   min-width: 25rem;
-  box-sizing: content-box;
+  box-sizing: border-box;
   background-color: #ebebeb;
   margin: 1vh 1vh 3vh 1vh;
   padding: 1vh 2vh 1vh 4vh;
@@ -264,10 +269,6 @@ html {
 #projects .projectCard:hover .project-link {
   opacity: 1;
   transition: all 0.1s ease-out;
-}
-#projects .projectCard:hover .overlay {
-  opacity: 0.95;
-  transition: all 0.2s ease-out;
 }
 
 #contacts {

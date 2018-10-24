@@ -35,8 +35,9 @@ body,
 html {
   margin: 0;
   padding: 0;
+  font-size: 16px;
   @media screen and (max-aspect-ratio: 1/1) {
-    font-size: 36px;
+    font-size: 1.75rem;
   }
 }
 
@@ -150,6 +151,7 @@ html {
     display: flex;
     flex-flow: row wrap;
     width: $mainContentWidth;
+    margin-bottom: 5vh;
     .card {
       display: block;
       min-width: 15rem;
@@ -159,6 +161,9 @@ html {
         flex-shrink: 0;
         min-width: 60%;
       }
+    }
+    table.table {
+      margin-bottom: 0;
     }
   }
 }
@@ -181,8 +186,9 @@ html {
   }
   .projectCard {
     width: $mainContentWidth;
+
     min-width: 25rem;
-    box-sizing: content-box;
+    box-sizing: border-box;
     background-color: $lightGray;
     margin: 1vh 1vh 3vh 1vh;
     padding: 1vh 2vh 1vh 4vh;
@@ -287,20 +293,10 @@ html {
       }
     }
 
-    // &:hover .overlay{
-    // 	width: 0;
-    // 	left: 100%;
-    // 	transition: all 0.2s ease-in-out;
-    // }
     &:hover {
       .project-link {
         opacity: 1;
         transition: all 0.1s ease-out;
-      }
-
-      .overlay {
-        opacity: 0.95;
-        transition: all 0.2s ease-out;
       }
     }
   }
