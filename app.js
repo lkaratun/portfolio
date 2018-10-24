@@ -95,3 +95,13 @@ function smoothScrollNative(target) {
     behavior: "smooth"
   });
 }
+
+function enlargeScreenshot(e) {
+  e.target.parentElement.classList.toggle("expanded");
+  document
+    .querySelectorAll("aside img.icon")
+    .forEach(element => element.classList.toggle("hidden"));
+}
+
+const screenshots = document.querySelectorAll("aside img");
+screenshots.forEach(element => element.addEventListener("click", enlargeScreenshot));

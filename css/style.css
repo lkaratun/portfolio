@@ -187,8 +187,36 @@ html {
 #projects .projectCard aside {
   width: 50%;
   float: right;
+  position: relative;
   padding: 0.5vw;
   box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+#projects .projectCard aside .enlarge {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7%;
+  border: 1px solid #393528;
+  border-radius: 5px;
+  padding: 1%;
+  transform: scale(2) translate(-25%, -40%);
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+#projects .projectCard aside .hidden {
+  display: none;
+}
+#projects .projectCard aside.expanded {
+  width: 100%;
+  transition: all 0.2s ease-out;
+}
+#projects .projectCard aside:hover .enlarge {
+  opacity: 0.5;
+  transition: all 0.1s ease-out;
 }
 #projects .projectCard aside a {
   margin: 0.5em;

@@ -42,7 +42,7 @@
 
 
     <!-- preload polyfill -->
-    <script>
+    <!-- <script>
       (function (w) {
         "use strict";
         // rel=preload support test
@@ -141,7 +141,7 @@
           w.loadCSS = loadCSS;
         }
       }(typeof global !== "undefined" ? global : this));
-    </script>
+    </script> -->
 
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
@@ -294,24 +294,21 @@
           <aside>
             <img src="https://res.cloudinary.com/lkaratun/image/upload/c_limit,e_sharpen:50,f_auto,q_100,w_600/v1535470091/portfolio/movies_web.png"
               alt="Screenshot of the project page">
+            <img src="logos/enlarge.svg" class="enlarge icon" title="Enlarge screenshot" alt="">
+            <img src="logos/shrink.svg" class="enlarge hidden icon" title="Shrink screenshot" alt="">
+
             <a href="https://levkaratun.com/movies_dashboard" target="_blank">View result</a>
             <a href="https://github.com/lkaratun/visualization_dashboard" target="_blank">View code</a>
           </aside>
-
           <article>
-
-
-            <h5>Problem</h5>
-            Visualize movie data to see whether there is a
-            correlation between movie budget, popularity, and average rating.
-            <br>
+            <h5>Problem</h5> Visualize movie data to see whether there is a correlation between
+            movie budget, popularity, and average rating. <br>
             <h5>Approach</h5>
 
             Dashboard consisting of four main sections:
             <ol>
               <li>
-                A scatter plot of popularity vs budget. Display movie details on hover and
-                click
+                A scatter plot of popularity vs budget. Display movie details on hover and click
               </li>
               <li>
                 Movie details: a section containing basic
@@ -472,6 +469,8 @@
           <aside>
             <img src="https://res.cloudinary.com/lkaratun/image/upload/v1540266945/portfolio/memory_game_web.png"
               alt="Memory game project" title="Open project in a new tab">
+            <img src="logos/enlarge.svg" class="enlarge icon" title="Enlarge screenshot" alt="">
+            <img src="logos/shrink.svg" class="enlarge hidden icon" title="Shrink screenshot" alt="">
             <a href="https://levkaratun.com/memory_game/" target="_blank">View result</a>
             <a href="https://github.com/lkaratun/memory_game" target="_blank">View code</a>
           </aside>
@@ -500,7 +499,7 @@
             <h5>Challenges</h5>
             <ol>
               <li>
-                <b>Adjustable game difficulty.</b>In order to offer some additional challenge for
+                <b>Adjustable game difficulty.</b> In order to offer some additional challenge for
                 the
                 memory ninjas out there, I implemented three difficulty levels: easy, medium,
                 hard. Switching the difficulty changes the number of cards on the board to 16,

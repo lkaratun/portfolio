@@ -5,15 +5,20 @@
   "main": "app.js",
   "dependencies": {
     "eslint": "^5.4.0",
-    "eslint-config-airbnb": "^17.1.0"
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.3"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "cssnano": "^4.0.5",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
