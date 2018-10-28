@@ -185,7 +185,7 @@
             Dashboard consisting of four main sections:
             <ol>
               <li>
-                A scatter plot of popularity vs budget. Display movie details on hover and click
+                A scatter plot: popularity vs budget. Display movie details on hover and click
               </li>
               <li>
                 Movie details: a section containing basic
@@ -194,11 +194,11 @@
               <li>
                 A map showing the number of movies filmed across
                 the world. Filter by one or multiple
-                countries by clicking on the map
+                countries by clicking the map
               </li>
               <li>
-                A bar chart showing genres of the movies. Filter by one or
-                multiple genres by clicking on the bar chart
+                A bar chart showing number of movies per genre. Filter by one or
+                multiple genres by clicking the bar chart
               </li>
             </ol>
 
@@ -208,13 +208,13 @@
                 - an open-source library allowing to build different types of
                 complex graphs.</li>
               <li>Due to the simple nature of the page, I decided not
-                to use front-end frameworks and stick with vanilla HTML
+                to use front-end frameworks and stick with vanilla JavaScript, HTML,
                 and <b><a href="https://sass-lang.com/" target="_blank">SASS</a></b>
                 compiled into CSS.</li>
               <li>It is easier to store movie data in documents format
                 rather than in tables, so I chose to use <b> <a href="https://www.mongodb.com"
                     target="_blank">MongoDB</a></b>
-                on the back-end.</li>
+                on the back end.</li>
               <li>Data is pulled from the back end API -- a MongoDB
                 driver + <b><a href="https://expressjs.com/" target="_blank"> Express</a></b>
                 application running on <b><a href="https://nodejs.org/en/" target="_blank">
@@ -226,8 +226,7 @@
                 running <b><a href="https://www.nginx.com/" target="_blank">Nginx</a> </b> web
                 server.</li>
               <li>Continuous integration is set up using <b><a href="https://jenkins.io/" target="_blank">Jenkins</a>
-                </b> and
-                <b><a href="http://github.com" target="_blank">GitHub</a> </b> web
+                </b> and <b><a href="http://github.com" target="_blank">GitHub</a> </b> web
                 hooks.</li>
             </ul>
             <h5 class="inline-header">Challenges</h5>
@@ -260,7 +259,7 @@
                       quotes that wrapped individual fields.
                     </li>
                     <li>
-                      Using a regular expression, replaced single
+                      Using another regular expression, replaced single
                       quotes that wrapped object keys with double quotes, without replacing
                       the apostrophes.
                     </li>
@@ -274,64 +273,34 @@
 
               <li>
                 <b>Performance tuning</b>
-                <div class="read-more-target">When a big time interval was chosen
-                  and no
-                  other
-                  filters were
-                  applied, a large amount of data had to be retrieved from the DB and
-                  transfer
-                  over
-                  to the front end. The initial version of the page took almost 3 seconds to
-                  load,
-                  and requests for more data taking up to 1.5 seconds. To decrease the load
-                  time,
-                  I
-                  took a number of steps:
+                <div class="read-more-target">When a big time interval was chosen and no other
+                  filters were applied, a large amount of data had to be retrieved from the DB and
+                  transferred over to the front end. The initial version of the page took almost 3
+                  seconds to load, and requests for more data taking up to 1.5 seconds. To decrease
+                  the load time, I took a number of steps:
 
                   <ol>
                     <li>
-                      Decreased the amount of fields retrieved from
-                      the database. I decided not to read the plot field even though we <em>might</em>
-                      need
-                      it if the user clicks on the movie to see details. Instead, pull it only
-                      if
-                      and
-                      when the user actually requests the details. This introduced a slight
-                      delay
-                      when retrieving the movie details, but significantly decreased page load
-                      time
-                      and improved general responsiveness.
+                      Decreased the amount of fields retrieved from the database. I decided not to
+                      read the plot field even though we <em>might</em> need it if the user clicks
+                      on the movie to see details. Instead, pull it only <em>if</em> and <em>when</em>
+                      the user
+                      actually requests the details. This introduced a slight delay in retrieving
+                      the movie details, but significantly decreased page load time and improved
+                      general responsiveness.
                     </li>
-                    <li>
-                      Delegate processing of data to the MongoDB
-                      engine. Instead of retrieving all data about what movies were filmed in
-                      each
-                      country, count the movies per country in the DB and only transfer the
-                      final
-                      number.
-                    </li>
-                    <li>
-                      Set up indices on the DB to speed up reads:
-                      since new data in never written to the DB, there was no downside to
-                      adding
-                      several indices to the collection.
-                    </li>
-                    <li>
-                      Cache data on front-end: after each request to
-                      the backend API save the retrieved data in memory. For any subsequent
-                      requests,
-                      if some or all data is cached, read it from memory and only request the
-                      missing
-                      part.
-                    </li>
-                  </ol>
-                  As a result, the initial <b>page load time decreased from 2 to 0.5 seconds</b>,
-                  additional requests - from <b>0.5-1.5 to 0.2-0.5 seconds</b>
-                  (depending
-                  on the
-                  amount
-                  of data requested).
-                </div>
+                    <li> Delegated processing of data to the MongoDB engine. Instead of retrieving
+                      all data about what movies were filmed in each country, count the movies per
+                      country in the DB and only transfer the final number. </li>
+                    <li> Set up indices on the DB to speed up reads: since new data in never
+                      written to the DB, there is no downside to adding several indices to the
+                      collection. </li>
+                    <li> Cache data on front-end: after each response from the backend API, save the
+                      retrieved data in memory. For any subsequent requests, if some or all data is
+                      cached, read it from memory and only request the missing part. </li>
+                  </ol> As a result, the initial <b>page load time decreased from 2 to 0.5 seconds</b>,
+                  additional requests - from <b>0.5-1.5 to 0.2-0.5 seconds</b> (depending on the
+                  amount of data requested). </div>
               </li>
             </ol>
 
@@ -380,13 +349,11 @@
                 hard. Switching the difficulty changes the number of cards on the board to 16,
                 24, and 32 respectively. Cards sizing is adjusted accordingly.</li>
               <li>
-                <b>Making the page mobile-friendly.</b> By means
+                <b>Responsive design (making the page mobile-friendly).</b> By means
                 of media queries, the cards size is increased on smaller devices.
               </li>
               <li>
-                <b>Win condition.</b> Every time the user finds a matching pair, the
-                number
-                of
+                <b>Win condition.</b> Every time the user finds a matching pair, the number of
                 opened cards is increased by two. When it reaches the total number of cards, a
                 win pop-up is displayed to the user.
               </li>
@@ -416,8 +383,6 @@
             class="logo">
             GitHub logo
           </object>GitHub</a>
-
-
       </div>
     </section>
 
