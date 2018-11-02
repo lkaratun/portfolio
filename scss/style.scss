@@ -214,6 +214,7 @@ html {
 
     @media screen and (max-width: 1400px) {
       width: 100%;
+      padding: 1vh 2vh 1vh 2vh;
     }
 
     ul,
@@ -330,6 +331,9 @@ html {
   justify-content: flex-start;
   position: relative;
   min-height: 40vh;
+  @media screen and (max-aspect-ratio: 1/1) {
+    min-height: 25vh;
+  }
 
   h4 {
     margin-top: 2rem;
