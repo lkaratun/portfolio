@@ -126,11 +126,13 @@ html {
   object-fit: scale-down;
   object-position: 0 0;
   width: 50%;
+  height: auto;
   border-radius: 50%;
   margin: 2%;
   float: left;
   @media screen and (max-aspect-ratio: 1/1) {
-    width: 70%;
+    width: auto;
+    height: auto;
     float: none;
     margin: 0 auto 5% auto;
   }
