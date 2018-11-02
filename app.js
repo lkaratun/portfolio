@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
+  window.onscroll = () => {
+    setNavBarVisibility();
+    handleScroll();
+  };
+  setUpSectionDimensions();
+});
+
+function setUpSectionDimensions() {
   const sections = document.querySelectorAll("section");
   const sectionsCoords = [];
   sections.forEach(section => {
@@ -30,7 +38,7 @@ window.addEventListener("load", () => {
   for (let i = 0; i < sectionsCoords.length - 1; i++) {
     sectionsBreakpoints.push((sectionsCoords[i] + sectionsCoords[i + 1]) / 2);
   }
-});
+}
 
 function handleScroll() {
   const correctSectionIndex = determineCorrectSectionIndex();
@@ -73,11 +81,6 @@ function restoreLinksAppearance(links) {
   });
 }
 
-window.onscroll = () => {
-  setNavBarVisibility();
-  handleScroll();
-};
-
 const scrollThreshold = window.innerHeight / 4;
 function setNavBarVisibility() {
   const navBarHeight = navBar.getBoundingClientRect().height;
@@ -91,32 +94,22 @@ function setNavBarVisibility() {
 function smoothScrollNative(target) {
   const navBarHeight = navBar.getBoundingClientRect().height;
   const targetPosition = target.getBoundingClientRect().top - navBarHeight;
-  console.log("targetPosition", targetPosition);
-  console.log("window.pageYOffset", window.pageYOffset);
   window.scroll({
     top: window.pageYOffset + targetPosition,
     behavior: "smooth"
   });
 }
 
-function enlargeScreenshot(e, url) {
-  e.target.parentElement.classList.toggle("expanded");
-  e.target.setAttribute("src", url);
+function enlargeScreenshot(e) {
+  const parent = e.target.parentElement;
+  parent.classList.toggle("expanded");
+
+  const oldUrl = parent.querySelector(".screenshot").getAttribute("src");
+  const newUrl = oldUrl.replace("/upload/w_600", "/upload");
+  parent.querySelector(".screenshot").setAttribute("src", newUrl);
+  parent.querySelectorAll("img.icon").forEach(element => element.classList.toggle("hidden"));
 }
 
 document
-  .getElementById("movies-screenshot")
-  .addEventListener("click", e =>
-    enlargeScreenshot(
-      e,
-      "https://res.cloudinary.com/lkaratun/image/upload/c_limit,e_sharpen:50,f_auto,q_70/v1535470091/portfolio/movies_web.png"
-    )
-  );
-document
-  .getElementById("memory-game-screenshot")
-  .addEventListener("click", e =>
-    enlargeScreenshot(
-      e,
-      "https://res.cloudinary.com/lkaratun/image/upload/v1540266945/portfolio/memory_game_web.png"
-    )
-  );
+  .querySelectorAll("aside>img")
+  .forEach(node => node.addEventListener("click", e => enlargeScreenshot(e)));
