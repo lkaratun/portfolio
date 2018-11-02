@@ -1,0 +1,2 @@
+.read-more-state{display:none}.read-more-target{font-size:0;max-height:0;opacity:0;transition:.25s ease}.read-more-state:checked~* .read-more-target{font-size:inherit;max-height:999em;opacity:1}.read-more-state~.read-more-trigger:before{content:"(show details)"}.read-more-state:checked~.read-more-trigger:before{content:"(hide details)"}.read-more-trigger{color:#2e4f6b;cursor:pointer;display:inline-block}.read-more-trigger:hover{text-decoration:underline}
+/*# sourceMappingURL=readMore.css.map */
