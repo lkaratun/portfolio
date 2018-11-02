@@ -1,3 +1,6 @@
+import "./scss/style.scss";
+import "./scss/readMore.scss";
+
 let navBar;
 let navLinks;
 const sectionsBreakpoints = [];

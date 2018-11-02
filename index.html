@@ -4,6 +4,7 @@
   <head>
 
     <title>Lev Karatun: full-stack web developer</title>
+    <meta http-equiv="Accept-CH" content="DPR, Width">
     <meta charset="utf-8">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -13,11 +14,6 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellefair|Gloria+Hallelujah">
     </noscript>
-
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/readMore.css">
-
 
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
@@ -295,7 +291,8 @@
                     <li> Set up indices on the DB to speed up reads: since new data in never
                       written to the DB, there is no downside to adding several indices to the
                       collection. </li>
-                    <li> Cache data on front-end: after each response from the backend API, save the
+                    <li> Cache data on front-end: after each response from the backend API, save
+                      the
                       retrieved data in memory. For any subsequent requests, if some or all data is
                       cached, read it from memory and only request the missing part. </li>
                   </ol> As a result, the initial <b>page load time decreased from 2 to 0.5 seconds</b>,
