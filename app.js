@@ -99,12 +99,24 @@ function smoothScrollNative(target) {
   });
 }
 
-function enlargeScreenshot(e) {
+function enlargeScreenshot(e, url) {
   e.target.parentElement.classList.toggle("expanded");
-  document
-    .querySelectorAll("aside img.icon")
-    .forEach(element => element.classList.toggle("hidden"));
+  e.target.setAttribute("src", url);
 }
 
-const screenshots = document.querySelectorAll("aside img");
-screenshots.forEach(element => element.addEventListener("click", enlargeScreenshot));
+document
+  .getElementById("movies-screenshot")
+  .addEventListener("click", e =>
+    enlargeScreenshot(
+      e,
+      "https://res.cloudinary.com/lkaratun/image/upload/c_limit,e_sharpen:50,f_auto,q_70/v1535470091/portfolio/movies_web.png"
+    )
+  );
+document
+  .getElementById("memory-game-screenshot")
+  .addEventListener("click", e =>
+    enlargeScreenshot(
+      e,
+      "https://res.cloudinary.com/lkaratun/image/upload/v1540266945/portfolio/memory_game_web.png"
+    )
+  );

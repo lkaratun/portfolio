@@ -97,15 +97,12 @@ html {
 #home {
   background-color: $darkGray;
   color: $lighterGray;
-  background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_400/v1535470462/portfolio/toronto_bg_web.jpg);
+  background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1200/v1535470462/portfolio/toronto_bg_web.jpg);
   background-size: cover;
   background-position: bottom;
   align-items: center;
   justify-content: center;
 
-  @media screen and (min-width: 800px) {
-    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1200/v1535470462/portfolio/toronto_bg_web.jpg);
-  }
   @media screen and (min-width: 1200px) {
     background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1600/v1535470462/portfolio/toronto_bg_web.jpg);
   }
