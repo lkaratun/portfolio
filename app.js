@@ -1,5 +1,7 @@
+import throttle from 'lodash/throttle';
 import "./scss/style.scss";
 import "./scss/readMore.scss";
+
 
 let navBar;
 let navLinks;
@@ -18,12 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
-  window.onscroll = () => {
-    setNavBarVisibility();
-    handleScroll();
-  };
+  window.onscroll =
+    throttle(function () {
+      setNavBarVisibility();
+      handleScroll();
+    }, 100);
   setUpSectionDimensions();
 });
+
 
 function setUpSectionDimensions() {
   const sections = document.querySelectorAll("section");
