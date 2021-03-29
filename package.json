@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "parcel build index.html --public-url ./",
-    "start": "parcel index.html --log-level 4"
+    "start": "parcel index.html --log-level info"
   },
   "dependencies": {
     "eslint": "^7.22.0",
@@ -22,6 +22,7 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "cssnano": "^4.1.10",

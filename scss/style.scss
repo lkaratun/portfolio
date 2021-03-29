@@ -93,24 +93,40 @@ html {
   }
 }
 
-/* Landing page */
 #home {
   background-color: $darkGray;
-  color: $lighterGray;
-  background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1200/v1535470462/portfolio/toronto_bg_web.jpg);
+
+  .dark-rectangle {
+    background: black;
+    opacity: 0.8;
+    border-radius: 25px;
+  }
+
+  h1,
+  h2 {
+    color: white;
+    margin: 2rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1200/v1535470462/portfolio/vancouver_lions_gate.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   align-items: center;
   justify-content: center;
 
   @media screen and (min-width: 1200px) {
-    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1600/v1535470462/portfolio/toronto_bg_web.jpg);
+    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1600/v1535470462/portfolio/vancouver_lions_gate.jpg);
   }
   @media screen and (min-width: 1600px) {
-    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_2400/v1535470462/portfolio/toronto_bg_web.jpg);
+    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_2400/v1535470462/portfolio/vancouver_lions_gate.jpg);
   }
   @media screen and (min-width: 2400px) {
-    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_3200/v1535470462/portfolio/toronto_bg_web.jpg);
+    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_3200/v1535470462/portfolio/vancouver_lions_gate.jpg);
   }
 
   #downArrow {
@@ -138,7 +154,7 @@ html {
   width: 50%;
   height: auto;
   border-radius: 50%;
-  margin: 2%;
+  margin: 2% 4% 2% 2%;
   float: left;
   @media screen and (max-aspect-ratio: 1/1) {
     width: auto;
@@ -156,7 +172,7 @@ html {
 
   #bio {
     margin: 2rem 0;
-    max-width: 45rem;
+    max-width: 60rem;
     a {
       color: $darkBlue;
     }
@@ -360,7 +376,7 @@ html {
 // Footer
 #contacts::after {
   content: "";
-  background: url(../toronto_skyline.png);
+  background: url(../images/toronto_skyline.png);
   // background: url(http://res.cloudinary.com/lkaratun/image/upload/s--qsm14XaB--/q_jpegmini:2/v1535422706/portfolio/toronto-bg.jpg);
   background-size: contain;
   background-repeat: repeat-x;
