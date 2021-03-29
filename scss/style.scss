@@ -346,7 +346,7 @@ html {
   flex-flow: column wrap;
   justify-content: flex-start;
   position: relative;
-  min-height: 40vh;
+  min-height: 25vh;
   @media screen and (max-aspect-ratio: 1/1) {
     min-height: 25vh;
   }
@@ -376,7 +376,7 @@ html {
 // Footer
 #contacts::after {
   content: "";
-  background: url(../images/toronto_skyline.png);
+  background: url(../images/vancouver_skyline.jpg);
   // background: url(http://res.cloudinary.com/lkaratun/image/upload/s--qsm14XaB--/q_jpegmini:2/v1535422706/portfolio/toronto-bg.jpg);
   background-size: contain;
   background-repeat: repeat-x;
