@@ -5,11 +5,11 @@
   flex-flow: column wrap;
   justify-content: flex-start;
   position: relative;
-  min-height: 25vh;
+  min-height: 10rem;
   text-align: center;
 
   @media screen and (max-width: 900px) {
-    min-height: 25vh;
+    min-height: 15vh;
   }
 
   h4 {
@@ -32,20 +32,4 @@
     color: colors.$graphiteHighlight;
     text-decoration: none;
   }
-}
-
-// Footer
-#contacts::after {
-  content: "";
-  background: url(../images/vancouver_skyline.jpg);
-  background-size: contain;
-  background-repeat: repeat-x;
-  background-position: bottom;
-  opacity: 0.2;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: 1;
-  height: 100px;
 }
