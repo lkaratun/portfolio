@@ -52,9 +52,6 @@
     a {
       color: colors.$darkBlue;
     }
-    // article {
-    //   text-align: left;
-    // }
 
     .screenshot-container {
       position: relative;
@@ -66,10 +63,6 @@
       .screenshot {
         max-height: 1000px;
         object-fit: cover;
-      }
-
-      &.expanded .screenshot {
-        max-height: unset;
       }
 
       .enlarge {
@@ -86,24 +79,38 @@
         cursor: pointer;
         transition: all 0.1s ease-out;
       }
+
       .hidden {
         display: none;
       }
+
+      &.half-width {
+        float: right;
+        width: 50%;
+      }
+
       &.expanded {
         width: 100%;
         max-height: max-content;
         transition: all 0.2s ease-out;
+
+        .screenshot {
+          max-height: fit-content;
+        }
       }
+
       &:hover .enlarge {
         opacity: 0.5;
         transition: all 0.1s ease-out;
       }
+
       a {
         margin: 0.5em;
         display: inline-block;
         font-size: 1.2em;
       }
     }
+
     img {
       width: 100%;
     }
