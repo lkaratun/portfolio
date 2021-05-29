@@ -1,11 +1,9 @@
-style.css.map
-node_modules/
 dist/
 .cache/
-.parcel-cache
 
 
-# Below are ignores from CRA
+# CRA-generated stuff below
+
 # dependencies
 /node_modules
 /.pnp

@@ -4,5 +4,6 @@
     "plusplus",
     "polyline",
     "scrollbar"
-  ]
+],
+"git.ignoreLimitWarning": true
 }
