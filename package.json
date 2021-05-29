@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "parcel build index.html --public-url ./",
-    "start": "parcel index.html --log-level info"
+    "start": "parcel index.html --log-level info --no-cache"
   },
   "dependencies": {
     "eslint": "^7.27.0",

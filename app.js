@@ -102,15 +102,16 @@ function smoothScrollNative(target) {
 }
 
 function enlargeScreenshot(e) {
+  console.log("🚀 ~ file: app.js ~ line 105 ~ enlargeScreenshot ~ enlargeScreenshot");
   const parent = e.target.parentElement;
   parent.classList.toggle("expanded");
-
-  const oldUrl = parent.querySelector(".screenshot").getAttribute("src");
-  const newUrl = oldUrl.replace("/upload/w_600", "/upload");
+  const newUrl = parent.classList.contains("expanded")
+    ? parent.querySelector(".screenshot").getAttribute("hq-image-url")
+    : parent.querySelector(".screenshot").getAttribute("lq-image-url");
   parent.querySelector(".screenshot").setAttribute("src", newUrl);
   parent.querySelectorAll("img.icon").forEach((element) => element.classList.toggle("hidden"));
 }
 
 document
-  .querySelectorAll("aside>img")
+  .querySelectorAll(".screenshot-container>img")
   .forEach((node) => node.addEventListener("click", (e) => enlargeScreenshot(e)));
