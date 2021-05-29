@@ -2,7 +2,7 @@ import './AboutPage.scss';
 
 export default function AboutPage() {
 	return (
-		<section id="cp-about-page" className="page">
+		<section id="about" className="page">
 			<div className="subHeader" id="bio">
 				<img
 					id="photo"
@@ -55,7 +55,7 @@ export default function AboutPage() {
 					<div className="card-body">
 						<table className="table">
 							<tbody className="">
-								<tr scope="row">
+								<tr>
 									<td className="border-0">node.js</td>
 									<td className="border-0">Express</td>
 								</tr>
@@ -77,7 +77,7 @@ export default function AboutPage() {
 					<div className="card-body">
 						<table className="table">
 							<tbody className="">
-								<tr scope="row">
+								<tr>
 									<td className="border-0">Webpack</td>
 									<td className="border-0">npm</td>
 								</tr>
