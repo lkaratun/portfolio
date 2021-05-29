@@ -53,6 +53,13 @@
       color: colors.$darkBlue;
     }
 
+    .project-link {
+      margin: 0.5em;
+      display: inline-block;
+      font-size: 1.2em;
+      text-decoration: underline;
+    }
+
     .screenshot-container {
       position: relative;
       padding: 0.5vw;
@@ -102,12 +109,6 @@
       &:hover .enlarge {
         opacity: 0.5;
         transition: all 0.1s ease-out;
-      }
-
-      a {
-        margin: 0.5em;
-        display: inline-block;
-        font-size: 1.2em;
       }
     }
 
