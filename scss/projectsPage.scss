@@ -42,13 +42,16 @@
       padding-left: 1em;
       box-sizing: border-box;
     }
+
     label,
     .inline-header {
       display: inline;
     }
+
     h5 {
       margin: 0.5rem 1rem 0 1rem;
     }
+
     a {
       color: colors.$darkBlue;
     }
