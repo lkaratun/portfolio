@@ -1,56 +1,56 @@
 @use 'colors';
 
-#home {
-  background-color: colors.$darkGray;
-  text-align: center;
+#cp-home-page {
+	background-color: colors.$darkGray;
+	text-align: center;
 
-  .dark-rectangle {
-    background: black;
-    opacity: 0.8;
-    border-radius: 25px;
-  }
+	.dark-rectangle {
+		background: black;
+		opacity: 0.8;
+		border-radius: 25px;
+	}
 
-  h1,
-  h2 {
-    color: white;
-    margin: 2rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1200/v1535470462/portfolio/vancouver_lions_gate.jpg);
-  background-size: cover;
-  background-position: center;
-  align-items: center;
-  justify-content: center;
+	h1,
+	h2 {
+		color: white;
+		margin: 2rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1200/v1535470462/portfolio/vancouver_lions_gate.jpg);
+	background-size: cover;
+	background-position: center;
+	align-items: center;
+	justify-content: center;
 
-  @media screen and (min-width: 1200px) {
-    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1600/v1535470462/portfolio/vancouver_lions_gate.jpg);
-  }
-  @media screen and (min-width: 1600px) {
-    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_2400/v1535470462/portfolio/vancouver_lions_gate.jpg);
-  }
-  @media screen and (min-width: 2400px) {
-    background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_3200/v1535470462/portfolio/vancouver_lions_gate.jpg);
-  }
+	@media screen and (min-width: 1200px) {
+		background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1600/v1535470462/portfolio/vancouver_lions_gate.jpg);
+	}
+	@media screen and (min-width: 1600px) {
+		background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_2400/v1535470462/portfolio/vancouver_lions_gate.jpg);
+	}
+	@media screen and (min-width: 2400px) {
+		background-image: url(https://res.cloudinary.com/lkaratun/image/upload/q_50/w_3200/v1535470462/portfolio/vancouver_lions_gate.jpg);
+	}
 
-  #downArrow {
-    width: 150px;
-    height: 80px;
+	#downArrow {
+		width: 150px;
+		height: 80px;
 
-    .shape {
-      fill: none;
-      stroke: hsl(208, 40%, 30%);
-      stroke-linecap: round;
-      stroke-linejoin: bevel;
-      stroke-width: 3px;
-    }
-  }
+		.shape {
+			fill: none;
+			stroke: hsl(208, 40%, 30%);
+			stroke-linecap: round;
+			stroke-linejoin: bevel;
+			stroke-width: 3px;
+		}
+	}
 
-  #downArrow:hover .shape {
-    stroke: white;
-  }
+	#downArrow:hover .shape {
+		stroke: white;
+	}
 }

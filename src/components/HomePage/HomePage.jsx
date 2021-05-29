@@ -2,8 +2,8 @@ import './HomePage.scss';
 
 export default function HomePage() {
 	return (
-		<section id="home" className="page">
-			<div class="dark-rectangle">
+		<section id="cp-home-page" className="page">
+			<div className="dark-rectangle">
 				<h1>Hi! My name is Lev.</h1>
 				<h2>I'm a Full-Stack Developer from Vancouver.</h2>
 			</div>

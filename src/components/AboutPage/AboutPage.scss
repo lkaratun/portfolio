@@ -1,0 +1,57 @@
+@use 'colors';
+@use 'layout';
+
+#cp-about-page {
+	padding: 0% 5%;
+	box-sizing: content-box;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+
+	#bio {
+		margin: 2rem 0;
+		max-width: 60rem;
+		a {
+			color: colors.$darkBlue;
+		}
+	}
+
+	.card-group {
+		display: flex;
+		flex-flow: row wrap;
+		width: layout.$mainContentWidth;
+		margin-bottom: 5vh;
+		@media screen and (max-width: 1400px) {
+			width: 90%;
+		}
+		.card {
+			display: block;
+			min-width: 15rem;
+			flex-shrink: 0;
+
+			@media screen and (max-width: 900px) {
+				flex-shrink: 0;
+				min-width: 60%;
+			}
+		}
+		table.table {
+			margin-bottom: 0;
+		}
+	}
+
+	#photo {
+		display: block;
+		object-position: 0 0;
+		width: 50%;
+		height: auto;
+		border-radius: 50%;
+		margin: 2% 4% 2% 2%;
+		float: left;
+		@media screen and (max-width: 900px) {
+			width: auto;
+			height: auto;
+			float: none;
+			margin: 0 auto 5% auto;
+		}
+	}
+}
