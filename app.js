@@ -1,7 +1,6 @@
-import throttle from 'lodash/throttle';
+import throttle from "lodash/throttle";
 import "./scss/style.scss";
 import "./scss/readMore.scss";
-
 
 let navBar;
 let navLinks;
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navBar = document.querySelector("#navbar");
   navLinks = document.querySelectorAll(".scroll-link");
 
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", handleNavigationClick);
   });
   const downArrow = document.querySelector("#downArrow");
@@ -20,19 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
-  window.onscroll =
-    throttle(function () {
-      setNavBarVisibility();
-      handleScroll();
-    }, 100);
+  window.onscroll = throttle(() => {
+    setNavBarVisibility();
+    handleScroll();
+  }, 100);
   setUpSectionDimensions();
 });
-
 
 function setUpSectionDimensions() {
   const sections = document.querySelectorAll("section");
   const sectionsCoords = [];
-  sections.forEach(section => {
+  sections.forEach((section) => {
     const navBarHeight = navBar.getBoundingClientRect().height;
     sectionsCoords.push(section.offsetTop);
     if (section.id !== "home") {
@@ -80,7 +77,7 @@ function highlightLink(target) {
   target.style.textDecoration = "underline";
 }
 function restoreLinksAppearance(links) {
-  links.forEach(link => {
+  links.forEach((link) => {
     link.style.textDecoration = "none";
   });
 }
@@ -100,7 +97,7 @@ function smoothScrollNative(target) {
   const targetPosition = target.getBoundingClientRect().top - navBarHeight;
   window.scroll({
     top: window.pageYOffset + targetPosition,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 }
 
@@ -111,9 +108,9 @@ function enlargeScreenshot(e) {
   const oldUrl = parent.querySelector(".screenshot").getAttribute("src");
   const newUrl = oldUrl.replace("/upload/w_600", "/upload");
   parent.querySelector(".screenshot").setAttribute("src", newUrl);
-  parent.querySelectorAll("img.icon").forEach(element => element.classList.toggle("hidden"));
+  parent.querySelectorAll("img.icon").forEach((element) => element.classList.toggle("hidden"));
 }
 
 document
   .querySelectorAll("aside>img")
-  .forEach(node => node.addEventListener("click", e => enlargeScreenshot(e)));
+  .forEach((node) => node.addEventListener("click", (e) => enlargeScreenshot(e)));
