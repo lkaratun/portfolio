@@ -1,6 +1,23 @@
 import './NavBar.scss';
 
+const SECTIONS = [
+	{ id: 'home', label: 'Home' },
+	{ id: 'about', label: 'About me' },
+	{ id: 'projects', label: 'Projects' },
+	{ id: 'contacts', label: 'Contacts' }
+];
+
 export default function NavBar() {
+	function renderLinks() {
+		return SECTIONS.map(({ id, label }) => (
+			<li className="nav-item" key={id}>
+				<a className="nav-link scroll-link" href={`#${id}`}>
+					{label}
+				</a>
+			</li>
+		));
+	}
+
 	return (
 		<nav id="navbar" className="navbar navbar-dark bg-dark fixed-top navbar-expand-md p-0">
 			<div className="container">
@@ -16,28 +33,7 @@ export default function NavBar() {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNav">
-					<ul className="navbar-nav w-100 d-flex justify-content-center">
-						<li className="nav-item">
-							<a className="nav-link scroll-link" href="#home">
-								Home
-							</a>
-						</li>
-						<li className="nav-item">
-							<a id="about-link" className="nav-link scroll-link" href="#about">
-								About me
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link scroll-link" href="#projects">
-								Projects
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link scroll-link" href="#contacts">
-								Contacts
-							</a>
-						</li>
-					</ul>
+					<ul className="navbar-nav w-100 d-flex justify-content-center">{renderLinks()}</ul>
 				</div>
 			</div>
 		</nav>
