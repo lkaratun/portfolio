@@ -8,6 +8,8 @@ const SECTIONS = [
 ];
 
 export default function NavBar({ navBarRef }) {
+
+
 	function renderLinks() {
 		return SECTIONS.map(({ id, label }) => (
 			<li className="nav-item" key={id}>
