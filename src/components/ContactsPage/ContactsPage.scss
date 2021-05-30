@@ -15,19 +15,20 @@
 	h4 {
 		margin-top: 2rem;
 	}
+
 	.subHeader {
 		margin: 0;
 	}
 
-	a {
+	a,
+	svg {
 		color: colors.$graphite;
-		object {
-			width: 1.5rem;
-			margin: 1rem;
-			vertical-align: middle;
-		}
 	}
-
+	svg {
+		width: 1.5rem;
+		margin: 0.5rem;
+		vertical-align: middle;
+	}
 	a:hover {
 		color: colors.$graphiteHighlight;
 		text-decoration: none;
