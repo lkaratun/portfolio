@@ -1,3 +1,4 @@
+import { handleNavigationClick } from '../utils/navigation';
 import './NavBar.scss';
 
 const SECTIONS = [
@@ -8,12 +9,15 @@ const SECTIONS = [
 ];
 
 export default function NavBar({ navBarRef }) {
-
-
 	function renderLinks() {
 		return SECTIONS.map(({ id, label }) => (
 			<li className="nav-item" key={id}>
-				<a className="nav-link scroll-link" href={`#${id}`} id={`${id}-link`}>
+				<a
+					className="nav-link scroll-link"
+					href={`#${id}`}
+					id={`${id}-link`}
+					onClick={e => handleNavigationClick(e, navBarRef)}
+				>
 					{label}
 				</a>
 			</li>

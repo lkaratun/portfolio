@@ -2,7 +2,7 @@ export function handleNavigationClick(e, navBarRef) {
 	e.preventDefault();
 	highlightLink(e.target, navBarRef);
 	const scrollTarget = document.querySelector(e.target.getAttribute('href'));
-	smoothScrollNative(scrollTarget);
+	smoothScrollNative(scrollTarget, navBarRef);
 }
 
 export function handleArrowClick(e, navBarRef) {
