@@ -1,4 +1,5 @@
 import './App.scss';
+import { useRef } from 'react';
 import HomePage from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import ProjectsPage from '../ProjectsPage/ProjectsPage';
@@ -6,10 +7,11 @@ import NavBar from '../NavBar/NavBar';
 import ContactsPage from '../ContactsPage/ContactsPage';
 
 function App() {
+	const navBarRef = useRef(null);
 	return (
 		<div className="App">
-			<NavBar />
-			<HomePage />
+			<NavBar navBarRef={navBarRef} />
+			<HomePage navBarRef={navBarRef} />
 			<AboutPage />
 			<ProjectsPage />
 			<ContactsPage />

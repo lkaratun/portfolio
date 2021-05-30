@@ -7,11 +7,11 @@ const SECTIONS = [
 	{ id: 'contacts', label: 'Contacts' }
 ];
 
-export default function NavBar() {
+export default function NavBar({ navBarRef }) {
 	function renderLinks() {
 		return SECTIONS.map(({ id, label }) => (
 			<li className="nav-item" key={id}>
-				<a className="nav-link scroll-link" href={`#${id}`}>
+				<a className="nav-link scroll-link" href={`#${id}`} id={`${id}-link`}>
 					{label}
 				</a>
 			</li>
@@ -19,7 +19,7 @@ export default function NavBar() {
 	}
 
 	return (
-		<nav id="navbar" className="navbar navbar-dark bg-dark fixed-top navbar-expand-md p-0">
+		<nav id="navbar" className="navbar navbar-dark bg-dark fixed-top navbar-expand-md p-0" ref={navBarRef}>
 			<div className="container">
 				<button
 					className="navbar-toggler"
