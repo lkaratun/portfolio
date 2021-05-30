@@ -18,7 +18,7 @@ function restoreLinksAppearance(links) {
 	});
 }
 
-function highlightLink(target, navBarRef) {
+export function highlightLink(target, navBarRef) {
 	const navLinks = navBarRef.current.querySelectorAll('.scroll-link');
 	restoreLinksAppearance(navLinks);
 	target.style.textDecoration = 'underline';
