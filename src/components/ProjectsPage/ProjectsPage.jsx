@@ -1,5 +1,5 @@
 import Project from './Project/Project';
-import { PROJECTS } from './projects';
+import { PROJECTS } from './projectContents';
 import './ProjectsPage.scss';
 
 export default function ProjectsPage() {
