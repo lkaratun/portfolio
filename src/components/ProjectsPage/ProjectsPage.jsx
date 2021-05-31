@@ -1,3 +1,5 @@
+import Enlarge from '../../logos/Enlarge';
+import Shrink from '../../logos/Shrink';
 import './ProjectsPage.scss';
 
 export default function ProjectsPage() {
@@ -15,12 +17,11 @@ export default function ProjectsPage() {
 							hq-image-url="https://res.cloudinary.com/lkaratun/image/upload/v1535470091/portfolio/bib_page_small.png"
 							alt="Screenshot of the movie dashboard project page"
 						/>
-						<img src="logos/enlarge.svg" className="enlarge icon" title="Expand screenshot" alt="" />
-						<img src="logos/shrink.svg" className="enlarge hidden icon" title="Shrink screenshot" alt="" />
+						<Enlarge />
+						<Shrink hidden />
 					</div>
 					<h3>Rebuilding a library catalog application page to use React + node.js</h3>
 					<div className="project-description">
-						{' '}
 						While working at Bibliocommons I was part of a small team (~3 developers) that worked on rebuilding one of
 						the app's main pages (book details page) using React and node.js.
 					</div>
