@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 export default {
 	header: 'Rebuilding a library catalog application page to use React + node.js',
 	contents: `While working at Bibliocommons I was part of a small team (~3 developers) that worked on rebuilding one of the app's main pages (book details page) using React and node.js.`,

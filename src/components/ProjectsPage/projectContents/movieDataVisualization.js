@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 export default {
 	header: 'Movie data visualization',
 	contents: (
