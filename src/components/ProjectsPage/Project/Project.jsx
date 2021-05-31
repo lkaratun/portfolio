@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Enlarge from '../../../logos/Enlarge';
 import Shrink from '../../../logos/Shrink';
+import './Project.scss';
 
 export default function Project({ header, contents, screenshots, links }) {
 	const { hq, lq, alt } = screenshots;
@@ -9,7 +10,7 @@ export default function Project({ header, contents, screenshots, links }) {
 	const [expanded, setExpanded] = useState(false);
 
 	return (
-		<div className="projectCard">
+		<div className="cp-project">
 			<div className="screenshot-container" onClick={() => setExpanded(!expanded)}>
 				<img className="screenshot" src={lq} lq-image-url={lq} hq-image-url={hq} alt={alt} />
 				<Enlarge hidden={expanded} />

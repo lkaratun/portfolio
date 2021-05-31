@@ -1,0 +1,147 @@
+@use 'layout';
+@use 'colors';
+// @use 'readMore';
+
+.cp-project {
+	width: layout.$mainContentWidth;
+
+	min-width: 25rem;
+	box-sizing: border-box;
+	background-color: colors.$lightGray;
+	margin: 1vh 1vh 3vh 1vh;
+	padding: 20px 40px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
+
+	@media screen and (max-width: 1400px) {
+		width: 100%;
+		padding: 1vh 2vh 1vh 2vh;
+	}
+
+	h3 {
+		min-width: 30vw;
+		margin: 1rem;
+	}
+
+	ul,
+	ol {
+		padding-left: 1em;
+		box-sizing: border-box;
+	}
+
+	label,
+	.inline-header {
+		display: inline;
+	}
+
+	h5 {
+		margin: 0.5rem 1rem 0 1rem;
+	}
+
+	a {
+		color: colors.$darkBlue;
+	}
+
+	.project-link {
+		margin: 0.5em;
+		display: inline-block;
+		font-size: 1.2em;
+		text-decoration: underline;
+	}
+
+	.screenshot-container {
+		position: relative;
+		padding: 0.5vw;
+		box-sizing: border-box;
+		cursor: pointer;
+		transition: all 0.2s ease-out;
+
+		.screenshot {
+			max-height: 1000px;
+			object-fit: cover;
+		}
+		// #projects > div > div:nth-child(1) > div.screenshot-container > svg.icon-enlarge
+		svg {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 7%;
+			border: 1px solid hsl(45, 17%, 19%);
+			border-radius: 5px;
+			padding: 1%;
+			transform: scale(2) translate(-25%, -40%);
+			cursor: pointer;
+			transition: all 0.1s ease-out;
+			opacity: 0;
+		}
+
+		&.half-width {
+			float: right;
+			width: 50%;
+		}
+
+		&.expanded {
+			width: 100%;
+			max-height: max-content;
+			transition: all 0.2s ease-out;
+
+			.screenshot {
+				max-height: fit-content;
+			}
+		}
+
+		&:hover [class^='icon'] {
+			opacity: 0.5;
+			transition: all 0.1s ease-out;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: colors.$darkBlue;
+		opacity: 0.9;
+		transition: all 0.25s ease-out;
+		overflow: hidden;
+
+		.project-link {
+			opacity: 0;
+			transition: all 0.25s ease-out;
+		}
+
+		.description {
+			width: 80%;
+			height: 100%;
+			left: 10%;
+			top: 30%;
+			position: absolute;
+			color: colors.$lightBlue;
+			overflow: hidden;
+			font-size: 1rem;
+
+			@media screen and (max-aspect-ratio: 1) {
+				top: 5%;
+				left: 5%;
+			}
+
+			.projectName {
+				font-size: 135%;
+				color: colors.$lighterGray;
+			}
+		}
+	}
+
+	&:hover {
+		.project-link {
+			opacity: 1;
+			transition: all 0.1s ease-out;
+		}
+	}
+}
