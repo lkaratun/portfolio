@@ -24,7 +24,17 @@ export function highlightLink(target, navBarRef) {
 	target.style.textDecoration = 'underline';
 }
 
+function pauseNavLinksUpdateOnScroll() {
+	const scrollHandler = window.onscroll;
+	window.onscroll = null;
+	setTimeout(() => {
+		window.onscroll = scrollHandler;
+	}, 1000);
+}
+
 function smoothScrollNative(target, navBarRef) {
+	// This is necessary so that NavBar links don't highlight during smooth scroll triggered by clicking a nav link
+	pauseNavLinksUpdateOnScroll();
 	const navBarHeight = navBarRef.current.getBoundingClientRect().height;
 	const targetPosition = target.getBoundingClientRect().top - navBarHeight;
 	window.scroll({
