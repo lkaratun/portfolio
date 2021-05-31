@@ -1,7 +1,7 @@
 @use 'layout';
 @use 'colors';
 
-.cp-project {
+.cp-project-card {
 	width: layout.$projectCardWidth;
 	min-width: 15rem;
 	box-sizing: border-box;
@@ -57,7 +57,6 @@
 			max-height: 1000px;
 			object-fit: cover;
 		}
-		// #projects > div > div:nth-child(1) > div.screenshot-container > svg.icon-enlarge
 		svg {
 			display: block;
 			position: absolute;

@@ -1,4 +1,4 @@
-import Project from './Project/Project';
+import ProjectCard from './ProjectCard/ProjectCard';
 import { PROJECTS } from './projectContents';
 import './ProjectsPage.scss';
 
@@ -8,7 +8,7 @@ export default function ProjectsPage() {
 			<h2>My work</h2>
 			<div className="projects-container">
 				{PROJECTS.map(({ header, contents, screenshots, links }) => (
-					<Project key={header} header={header} contents={contents} screenshots={screenshots} links={links} />
+					<ProjectCard key={header} header={header} contents={contents} screenshots={screenshots} links={links} />
 				))}
 			</div>
 		</section>
