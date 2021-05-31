@@ -1,5 +1,8 @@
+// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import ProjectCard from './ProjectCard/ProjectCard';
-import { PROJECTS } from './projectContents';
+import { PROJECTS } from '../projectContents';
+
 import './ProjectsPage.scss';
 
 export default function ProjectsPage() {

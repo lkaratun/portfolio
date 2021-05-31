@@ -1,6 +1,16 @@
 // eslint-disable-next-line
 export default {
 	header: 'Movie data visualization',
+	screenshots: {
+		lq: 'https://res.cloudinary.com/lkaratun/image/upload/w_600/c_limit,e_sharpen:50,f_auto,q_60/v1535470091/portfolio/movies_web.png',
+		hq: 'https://res.cloudinary.com/lkaratun/image/upload/c_limit,e_sharpen:50,f_auto,q_60/v1535470091/portfolio/movies_web.png',
+		alt: 'Screenshot of the movie dashboard project page'
+	},
+	links: {
+		result: 'https://movie-data-visualization.levkaratun.com',
+		code: 'https://github.com/lkaratun/visualization_dashboard'
+	},
+	subPageUrl: 'movie-data-visualization',
 	contents: (
 		<article>
 			<h5>Problem</h5>
@@ -147,14 +157,5 @@ export default {
 				</li>
 			</ol>
 		</article>
-	),
-	screenshots: {
-		lq: 'https://res.cloudinary.com/lkaratun/image/upload/w_600/c_limit,e_sharpen:50,f_auto,q_60/v1535470091/portfolio/movies_web.png',
-		hq: 'https://res.cloudinary.com/lkaratun/image/upload/c_limit,e_sharpen:50,f_auto,q_60/v1535470091/portfolio/movies_web.png',
-		alt: 'Screenshot of the movie dashboard project page'
-	},
-	links: {
-		result: 'https://movie-data-visualization.levkaratun.com',
-		code: 'https://github.com/lkaratun/visualization_dashboard'
-	}
+	)
 };

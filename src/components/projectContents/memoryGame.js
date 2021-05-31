@@ -1,6 +1,16 @@
 // eslint-disable-next-line
 export default {
 	header: 'Memory game',
+	screenshots: {
+		lq: 'https://res.cloudinary.com/lkaratun/image/upload/w_600/v1540266945/portfolio/memory_game_web.png',
+		hq: 'https://res.cloudinary.com/lkaratun/image/upload/v1540266945/portfolio/memory_game_web.png',
+		alt: 'Memory game project'
+	},
+	links: {
+		result: 'https://memory-game.levkaratun.com',
+		code: 'https://github.com/lkaratun/memory_game'
+	},
+	subPageUrl: 'memory-game',
 	contents: (
 		<article>
 			<h5>Problem</h5>
@@ -55,14 +65,5 @@ export default {
 				<li>User experience. Smooth transitions and animations are used in order to create a nice user experience.</li>
 			</ol>
 		</article>
-	),
-	screenshots: {
-		lq: 'https://res.cloudinary.com/lkaratun/image/upload/w_600/v1540266945/portfolio/memory_game_web.png',
-		hq: 'https://res.cloudinary.com/lkaratun/image/upload/v1540266945/portfolio/memory_game_web.png',
-		alt: 'Memory game project'
-	},
-	links: {
-		result: 'https://memory-game.levkaratun.com',
-		code: 'https://github.com/lkaratun/memory_game'
-	}
+	)
 };

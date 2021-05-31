@@ -12,8 +12,9 @@ const SECTIONS = [
 	{ id: 'contacts', label: 'Contacts' }
 ];
 
-export default function NavBar({ navBarRef }) {
+export default function NavBar({ navBarRef, alwaysVisible }) {
 	useEffect(() => {
+		if (alwaysVisible) return;
 		const scrollThreshold = window.innerHeight / 4;
 		function setNavBarVisibility() {
 			const navBarHeight = navBarRef.current.getBoundingClientRect().height;
@@ -62,7 +63,7 @@ export default function NavBar({ navBarRef }) {
 		return () => {
 			window.onscroll = null;
 		};
-	}, [navBarRef]);
+	}, [navBarRef, alwaysVisible]);
 
 	function determineCorrectSectionIndex(sectionsBreakpoints) {
 		for (let breakpointIndex = 0; breakpointIndex < sectionsBreakpoints.length; breakpointIndex++) {
@@ -73,15 +74,15 @@ export default function NavBar({ navBarRef }) {
 		return sectionsBreakpoints.length;
 	}
 
+	function handleClick(e) {
+		if (alwaysVisible) return;
+		handleNavigationClick(e, navBarRef);
+	}
+
 	function renderLinks() {
 		return SECTIONS.map(({ id, label }) => (
 			<li className="nav-item" key={id}>
-				<a
-					className="nav-link scroll-link"
-					href={`#${id}`}
-					id={`${id}-link`}
-					onClick={e => handleNavigationClick(e, navBarRef)}
-				>
+				<a className="nav-link scroll-link" href={`/#${id}`} id={`${id}-link`} onClick={handleClick}>
 					{label}
 				</a>
 			</li>

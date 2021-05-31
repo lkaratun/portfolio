@@ -1,14 +1,10 @@
 @use 'layout';
 @use 'colors';
 
-.cp-project-card {
-	width: layout.$projectCardWidth;
+.cp-bib-page {
 	min-width: 15rem;
 	box-sizing: border-box;
-	background-color: colors.$lightGray;
-	margin: 1vh 1vh 3vh 1vh;
 	padding: 20px 40px;
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
 
 	@media screen and (max-width: 1400px) {
 		width: 100%;
@@ -51,10 +47,10 @@
 		box-sizing: border-box;
 		cursor: pointer;
 		transition: all 0.2s ease-out;
+		width: 70%;
 
 		.screenshot {
-			max-height: 1000px;
-			object-fit: cover;
+			object-fit: contain;
 		}
 		svg {
 			display: block;
@@ -90,10 +86,6 @@
 			opacity: 0.5;
 			transition: all 0.1s ease-out;
 		}
-	}
-
-	img {
-		width: 100%;
 	}
 
 	.overlay {
