@@ -6,7 +6,7 @@ export default function ProjectsPage() {
 	return (
 		<section id="projects" className="page">
 			<h2>My work</h2>
-			<div className="projectsContainer">
+			<div className="projects-container">
 				{PROJECTS.map(({ header, contents, screenshots, links }) => (
 					<Project key={header} header={header} contents={contents} screenshots={screenshots} links={links} />
 				))}

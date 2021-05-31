@@ -1,11 +1,9 @@
 @use 'layout';
 @use 'colors';
-// @use 'readMore';
 
 .cp-project {
-	width: layout.$mainContentWidth;
-
-	min-width: 25rem;
+	width: layout.$projectCardWidth;
+	min-width: 15rem;
 	box-sizing: border-box;
 	background-color: colors.$lightGray;
 	margin: 1vh 1vh 3vh 1vh;
