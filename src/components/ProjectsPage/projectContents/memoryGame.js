@@ -8,32 +8,32 @@ export default {
 			game board contains cards of initially hidden color. The goal of the game is finding card pairs or matching color
 			by clicking the cards.
 			<h5> Choice of technologies</h5>
-			The game is built using
+			The game is built using{' '}
 			<a href="https://reactjs.org/" target="_blank" rel="noreferrer">
 				React
 			</a>
-			, bootstrapped using
+			, bootstrapped using{' '}
 			<a href="https://github.com/facebook/create-react-app" target="_blank" rel="noreferrer">
 				create-react-app
 			</a>
-			, and hosted on a
+			, and hosted on a{' '}
 			<a href="https://aws.amazon.com/ec2/" target="_blank" rel="noreferrer">
 				AWS EC2
-			</a>
-			instance running
+			</a>{' '}
+			instance running{' '}
 			<a href="https://www.nginx.com/" target="_blank" rel="noreferrer">
 				Nginx
-			</a>
+			</a>{' '}
 			web server.
 			<br />
-			Continuous integration is set up using
+			Continuous integration is set up using{' '}
 			<a href="https://jenkins.io/" target="_blank" rel="noreferrer">
 				Jenkins
-			</a>
-			and
+			</a>{' '}
+			and{' '}
 			<a href="https://github.com/" target="_blank" rel="noreferrer">
 				GitHub
-			</a>
+			</a>{' '}
 			web hooks.
 			<br />
 			<h5>Challenges</h5>
