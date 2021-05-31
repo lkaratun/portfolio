@@ -34,7 +34,7 @@ function pauseNavLinksUpdateOnScroll() {
 
 function smoothScrollNative(target, navBarRef) {
 	// This is necessary so that NavBar links don't highlight during smooth scroll triggered by clicking a nav link
-	pauseNavLinksUpdateOnScroll();
+	// pauseNavLinksUpdateOnScroll();
 	const navBarHeight = navBarRef.current.getBoundingClientRect().height;
 	const targetPosition = target.getBoundingClientRect().top - navBarHeight;
 	window.scroll({

@@ -1,6 +1,10 @@
-export default function Enlarge() {
+import classNames from 'classnames';
+
+export default function Enlarge({ hidden }) {
+	const className = classNames('icon-enlarge', { hidden });
+
 	return (
-		<svg className="icon-enlarge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+		<svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 			<path
 				fill="#302E28"
 				d="M16,7H8C7.4,7,7,7.4,7,8v8c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1V8C17,7.4,16.6,7,16,7z M16,16H8V8h8V16z"

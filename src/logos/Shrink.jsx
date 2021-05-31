@@ -1,7 +1,7 @@
-import cn from 'classnames';
+import classNames from 'classnames';
 
 export default function Shrink({ hidden }) {
-	const className = cn('icon-shrink', { hidden });
+	const className = classNames('icon-shrink', { hidden });
 	return (
 		<svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 			<path
