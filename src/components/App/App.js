@@ -16,11 +16,11 @@ function App() {
 			<Router>
 				<Switch>
 					<Route path="/bib-page">
-						<NavBar navBarRef={navBarRef} alwaysVisible />
+						{/* <NavBar navBarRef={navBarRef} alwaysVisible /> */}
 						<BibPage />
 					</Route>
 					<Route path="/">
-						<NavBar navBarRef={navBarRef} />
+						{/* <NavBar navBarRef={navBarRef} /> */}
 						<HomePage navBarRef={navBarRef} />
 						<AboutPage />
 						<ProjectsPage />

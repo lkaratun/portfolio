@@ -10,13 +10,6 @@ export function handleNavigationClick(e, navBarRef) {
 	smoothScrollNative(scrollTarget, navBarRef);
 }
 
-export function handleArrowClick(e, navBarRef) {
-	e.preventDefault();
-	highlightLink(navBarRef.current.querySelector('#about-link'), navBarRef);
-	const scrollTarget = document.querySelector('#about');
-	smoothScrollNative(scrollTarget, navBarRef);
-}
-
 function restoreLinksAppearance(links) {
 	links.forEach(link => {
 		link.style.textDecoration = 'none';

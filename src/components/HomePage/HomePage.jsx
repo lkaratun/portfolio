@@ -1,20 +1,23 @@
 import './HomePage.scss';
-import { handleArrowClick } from '../utils/navigation';
 
 export default function HomePage({ navBarRef }) {
 	return (
-		<section id="home" className="page">
-			<div className="dark-rectangle">
-				<h1>Hi! My name is Lev.</h1>
-				<h2>I'm a Full-Stack Developer from Vancouver.</h2>
+		<section id="home" className="cp-home-page">
+			<div className="greeting">
+				<h1>
+					Hi! I'm Lev,
+					<br />a Full-Stack Engineer
+				</h1>
+				<p>
+					I'm driven by new technologies, application performance, and writing clean, testable code. I’m experienced in
+					development of a large scale distributed application.
+				</p>
+				<button>Download my resume</button>
 			</div>
-			<a href="#about" onClick={e => handleArrowClick(e, navBarRef)}>
-				<svg id="downArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 26.38">
-					<defs></defs>
-					<title>About me</title>
-					<polyline className="shape" points="1.5,1.5 51.5,24.88 101.5,1.5" />
-				</svg>
-			</a>
+			<img
+				src="https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1200/v1622790117/portfolio/my_photo.jpg"
+				alt="Lev in Vancouver"
+			></img>
 		</section>
 	);
 }

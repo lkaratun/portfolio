@@ -1,2 +1,13 @@
 $mainContentWidth: 1400px;
 $projectCardWidth: 600px;
+
+@mixin full-height {
+	height: 1100px;
+	max-height: 100vh;
+}
+
+@mixin centered {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1600px;
+}

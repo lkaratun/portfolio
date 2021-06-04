@@ -6,10 +6,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 ReactDOM.render(
 	<HelmetProvider>
 		<React.StrictMode>
-			<Helmet>
-				{/* Bootstrap */}
-				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-			</Helmet>
+			{/* <Helmet></Helmet> */}
 			<App />
 		</React.StrictMode>
 	</HelmetProvider>,
