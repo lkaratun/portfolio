@@ -27,7 +27,7 @@ html {
 }
 
 body {
-	background: #ddd;
+	background: colors.$lightGray;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -80,5 +80,5 @@ body {
 // }
 
 // ::-webkit-scrollbar-thumb {
-// 	background: colors.$darkBlue;
+// 	background: colors.$dark-blue;
 // }

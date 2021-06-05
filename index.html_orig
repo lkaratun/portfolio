@@ -187,8 +187,8 @@
                         lq-image-url="https://res.cloudinary.com/lkaratun/image/upload/w_1200/c_crop,g_north,h_900,w_1200/v1535470091/portfolio/bib_page_small.png"
                         hq-image-url="https://res.cloudinary.com/lkaratun/image/upload/v1535470091/portfolio/bib_page_small.png"
                         alt="Screenshot of the movie dashboard project page">
-                    <img src="logos/enlarge.svg" class="enlarge icon" title="Expand screenshot" alt="">
-                    <img src="logos/shrink.svg" class="enlarge hidden icon" title="Shrink screenshot" alt="">
+                    <img src="icons/enlarge.svg" class="enlarge icon" title="Expand screenshot" alt="">
+                    <img src="icons/shrink.svg" class="enlarge hidden icon" title="Shrink screenshot" alt="">
 
 
                 </div>
@@ -211,8 +211,8 @@
                         lq-image-url="https://res.cloudinary.com/lkaratun/image/upload/w_600/c_limit,e_sharpen:50,f_auto,q_60/v1535470091/portfolio/movies_web.png"
                         hq-image-url="https://res.cloudinary.com/lkaratun/image/upload/c_limit,e_sharpen:50,f_auto,q_60/v1535470091/portfolio/movies_web.png"
                         alt="Screenshot of the movie dashboard project page">
-                    <img src="logos/enlarge.svg" class="enlarge icon" title="Expand screenshot" alt="">
-                    <img src="logos/shrink.svg" class="enlarge hidden icon" title="Shrink screenshot" alt="">
+                    <img src="icons/enlarge.svg" class="enlarge icon" title="Expand screenshot" alt="">
+                    <img src="icons/shrink.svg" class="enlarge hidden icon" title="Shrink screenshot" alt="">
 
                     <a href="https://movie-data-visualization.levkaratun.com/" target="_blank" class="project-link">View
                         result</a>
@@ -369,8 +369,8 @@
                         lq-image-url="https://res.cloudinary.com/lkaratun/image/upload/w_600/v1540266945/portfolio/memory_game_web.png"
                         hq-image-url="https://res.cloudinary.com/lkaratun/image/upload/v1540266945/portfolio/memory_game_web.png"
                         alt="Memory game project">
-                    <img src="logos/enlarge.svg" class="enlarge icon" title="Expand screenshot" alt="">
-                    <img src="logos/shrink.svg" class="enlarge hidden icon" title="Shrink screenshot" alt="">
+                    <img src="icons/enlarge.svg" class="enlarge icon" title="Expand screenshot" alt="">
+                    <img src="icons/shrink.svg" class="enlarge hidden icon" title="Shrink screenshot" alt="">
                     <a href="https://memory-game.levkaratun.com/" target="_blank" class="project-link">View result</a>
                     <a href="https://github.com/lkaratun/memory_game" target="_blank" class="project-link">View code</a>
                 </aside>
@@ -427,15 +427,15 @@
     <section id="contacts" class="page">
         <h4>Let's get in touch!</h4>
         <div class="subHeader">
-            <a href="mailto:lev.karatun@gmail.com" target="_blank"> <object type="image/svg+xml" data="logos/email.svg"
+            <a href="mailto:lev.karatun@gmail.com" target="_blank"> <object type="image/svg+xml" data="icons/email.svg"
                     class="logo">
                     Email logo
                 </object>E-mail</a>
             <a href="https://www.linkedin.com/in/lkaratun" target="_blank"> <object type="image/svg+xml"
-                    data="logos/linkedin.svg" class="logo">
+                    data="icons/linkedin.svg" class="logo">
                     LinkedIn logo
                 </object>LinkedIn</a>
-            <a href="https://github.com/lkaratun" target="_blank"> <object type="image/svg+xml" data="logos/github.svg"
+            <a href="https://github.com/lkaratun" target="_blank"> <object type="image/svg+xml" data="icons/github.svg"
                     class="logo">
                     GitHub logo
                 </object>GitHub</a>

@@ -1,0 +1,21 @@
+@use 'colors';
+
+@mixin heading {
+	color: colors.$dark-blue;
+	font-size: 48px;
+	margin-bottom: 32px;
+}
+
+@mixin heading-secondary {
+	display: block;
+	color: colors.$light-purple;
+	font-size: 24px;
+	margin-bottom: 16px;
+	text-transform: uppercase;
+}
+
+@mixin heading-small {
+	color: colors.$dark-blue;
+	font-size: 28px;
+	margin-bottom: 20px;
+}

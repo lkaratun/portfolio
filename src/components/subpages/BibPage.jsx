@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import bibPage from '../projectContents/bibPage';
-import Enlarge from '../../logos/Enlarge';
-import Shrink from '../../logos/Shrink';
+import Enlarge from '../../icons/Enlarge';
+import Shrink from '../../icons/Shrink';
 import './BibPage.scss';
 
 export default function BibPage() {

@@ -2,10 +2,10 @@
 @use 'layout';
 @use 'mixins';
 
-#about {
+#skills {
 	@include layout.centered;
 
-	background: #f8f6fa;
+	background: white;
 
 	padding: 120px 20%;
 
@@ -17,12 +17,22 @@
 		@include mixins.heading;
 	}
 
+	h2 {
+		@include mixins.heading-small;
+
+		display: flex;
+		align-items: center;
+	}
+
 	.subheading {
 		@include mixins.heading-secondary;
 	}
 
+	[class^='icon'] {
+		margin-right: 16px;
+	}
+
 	p {
-		color: rgba(116, 116, 134, 1);
-		margin-bottom: 0.5rem;
+		margin-bottom: 52px;
 	}
 }

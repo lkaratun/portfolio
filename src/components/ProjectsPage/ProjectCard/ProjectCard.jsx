@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Enlarge from '../../../logos/Enlarge';
-import Shrink from '../../../logos/Shrink';
+import Enlarge from '../../../icons/Enlarge';
+import Shrink from '../../../icons/Shrink';
 import './ProjectCard.scss';
 
 export default function Project({ header, contents, screenshots, links }) {

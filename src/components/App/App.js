@@ -5,6 +5,7 @@ import HomePage from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import ProjectsPage from '../ProjectsPage/ProjectsPage';
 import NavBar from '../NavBar/NavBar';
+import SkillsPage from '../SkillsPage/SkillsPage';
 import ContactsPage from '../ContactsPage/ContactsPage';
 import BibPage from '../subpages/BibPage';
 
@@ -23,6 +24,7 @@ function App() {
 						{/* <NavBar navBarRef={navBarRef} /> */}
 						<HomePage navBarRef={navBarRef} />
 						<AboutPage />
+						<SkillsPage />
 						<ProjectsPage />
 						<ContactsPage />
 					</Route>

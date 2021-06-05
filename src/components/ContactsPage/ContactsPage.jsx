@@ -1,7 +1,7 @@
 import './ContactsPage.scss';
-import Email from '../../logos/Email';
-import Linkedin from '../../logos/Linkedin';
-import Github from '../../logos/Github';
+import Email from '../../icons/Email';
+import Linkedin from '../../icons/Linkedin';
+import Github from '../../icons/Github';
 
 export default function ContactsPage() {
 	return (
