@@ -22,6 +22,10 @@ export default function SkillsPage() {
 				</h2>
 				<p>Webpack, npm, Immutable.js , d3, git, AST, Python, PostgreSQL, Express, AWS</p>
 			</div>
+			<img
+				src="https://res.cloudinary.com/lkaratun/image/upload/q_50/w_1200/v1622790117/portfolio/laptop.jpg"
+				alt="Lev in Vancouver"
+			></img>
 		</section>
 	);
 }
