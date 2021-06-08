@@ -2,7 +2,7 @@ import './HomePage.scss';
 
 export default function HomePage({ navBarRef }) {
 	return (
-		<section id="home" className="cp-home-page">
+		<section id="home">
 			<div className="greeting">
 				<h1>
 					Hi! I'm Lev,

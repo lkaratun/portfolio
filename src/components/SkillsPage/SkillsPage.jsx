@@ -5,7 +5,7 @@ import './SkillsPage.scss';
 
 export default function SkillsPage() {
 	return (
-		<section id="skills" className="cp-skills-page">
+		<section id="skills">
 			<div className="content">
 				<span className="subheading">Skills</span>
 				<h1>Technologies I use</h1>

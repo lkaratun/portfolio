@@ -1,11 +1,17 @@
 @use 'layout';
 @use 'colors';
-@use 'readMore';
+@use 'mixins';
 
 #projects {
+	@include layout.centered;
 	height: auto;
 	min-height: 50vh;
-	background: colors.$lighterGray;
+	background: colors.$light-gray;
+	padding: 120px 80px;
+
+	.subheading {
+		@include mixins.heading-secondary;
+	}
 
 	.projects-container {
 		display: flex;
@@ -14,7 +20,8 @@
 		justify-content: center;
 	}
 
-	h2 {
+	h1 {
+		@include mixins.heading;
 		margin-left: auto;
 		margin-right: auto;
 	}

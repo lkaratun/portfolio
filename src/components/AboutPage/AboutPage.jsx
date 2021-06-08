@@ -2,7 +2,7 @@ import './AboutPage.scss';
 
 export default function AboutPage() {
 	return (
-		<section id="about" className="cp-about-page">
+		<section id="about">
 			<div className="content">
 				<span className="subheading">About me</span>
 				<h1>Nice to see you on my page!</h1>
