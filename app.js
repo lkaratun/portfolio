@@ -33,7 +33,9 @@ function setUpSectionDimensions() {
     const navBarHeight = navBar.getBoundingClientRect().height;
     sectionsCoords.push(section.offsetTop);
     if (section.id !== "home") {
-      section.style.minHeight = `${section.getBoundingClientRect().height - navBarHeight}px`;
+      section.style.minHeight = `${
+        section.getBoundingClientRect().height - navBarHeight
+      }px`;
     }
   });
   for (let i = 0; i < sectionsCoords.length - 1; i++) {
@@ -50,7 +52,11 @@ function handleScroll() {
 }
 
 function determineCorrectSectionIndex() {
-  for (let breakpointIndex = 0; breakpointIndex < sectionsBreakpoints.length; breakpointIndex++) {
+  for (
+    let breakpointIndex = 0;
+    breakpointIndex < sectionsBreakpoints.length;
+    breakpointIndex++
+  ) {
     if (window.scrollY < sectionsBreakpoints[breakpointIndex]) {
       return breakpointIndex;
     }
@@ -102,16 +108,22 @@ function smoothScrollNative(target) {
 }
 
 function enlargeScreenshot(e) {
-  console.log("🚀 ~ file: app.js ~ line 105 ~ enlargeScreenshot ~ enlargeScreenshot");
+  console.log(
+    "🚀 ~ file: app.js ~ line 105 ~ enlargeScreenshot ~ enlargeScreenshot"
+  );
   const parent = e.target.parentElement;
   parent.classList.toggle("expanded");
   const newUrl = parent.classList.contains("expanded")
     ? parent.querySelector(".screenshot").getAttribute("hq-image-url")
     : parent.querySelector(".screenshot").getAttribute("lq-image-url");
   parent.querySelector(".screenshot").setAttribute("src", newUrl);
-  parent.querySelectorAll("img.icon").forEach((element) => element.classList.toggle("hidden"));
+  parent
+    .querySelectorAll("img.icon")
+    .forEach((element) => element.classList.toggle("hidden"));
 }
 
 document
   .querySelectorAll(".screenshot-container>img")
-  .forEach((node) => node.addEventListener("click", (e) => enlargeScreenshot(e)));
+  .forEach((node) =>
+    node.addEventListener("click", (e) => enlargeScreenshot(e))
+  );

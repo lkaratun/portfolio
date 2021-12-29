@@ -4,7 +4,7 @@ import './App.scss';
 import HomePage from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import ProjectsPage from '../ProjectsPage/ProjectsPage';
-import NavBar from '../NavBar/NavBar';
+// import NavBar from '../NavBar/NavBar';
 import SkillsPage from '../SkillsPage/SkillsPage';
 import ContactsPage from '../ContactsPage/ContactsPage';
 import BibPage from '../subpages/BibPage';
