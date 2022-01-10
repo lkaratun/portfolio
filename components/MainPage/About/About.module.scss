@@ -1,0 +1,28 @@
+@use 'styles/colors';
+@use 'styles/layout';
+@use 'styles/mixins';
+
+#about {
+	@include layout.centered;
+
+	background: #f8f6fa;
+
+	padding: 120px 15%;
+
+	.content {
+		display: block;
+	}
+
+	h1 {
+		@include mixins.heading;
+	}
+
+	.subheading {
+		@include mixins.heading-secondary;
+	}
+
+	p {
+		color: rgba(116, 116, 134, 1);
+		margin-bottom: 0.5rem;
+	}
+}

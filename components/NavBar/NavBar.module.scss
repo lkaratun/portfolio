@@ -1,0 +1,21 @@
+@use '../../styles/colors';
+
+.navbar {
+  top: -70px;
+  transition: top 0.2s ease-out;
+
+  .navbar-nav {
+    .nav-link {
+      color: colors.$lightGray;
+    }
+
+    .nav-link:hover {
+      color: white;
+    }
+  }
+
+  .nav-item {
+    margin: 0 2%;
+    font-size: 1.1rem;
+  }
+}

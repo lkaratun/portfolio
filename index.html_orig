@@ -38,19 +38,19 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-dark bg-dark fixed-top navbar-expand-md p-0">
+    <nav id={styles.navbar} class="navbar navbar-dark bg-dark fixed-top navbar-expand-md p-0">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id={styles.navbarNav}>
                 <ul class="navbar-nav w-100 d-flex justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link scroll-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="about-link" class="nav-link scroll-link" href="#about">About me</a>
+                        <a id={styles.about-link} class="nav-link scroll-link" href="#about">About me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll-link" href="#projects">Projects</a>
@@ -63,13 +63,13 @@
         </div>
     </nav>
 
-    <section id="home" class="page">
+    <section id={styles.home} class="page">
         <div class="dark-rectangle">
             <h1>Hi! My name is Lev.</h1>
             <h2>I'm a Full-Stack Developer from Vancouver.</h2>
         </div>
         <a href="#about">
-            <svg id="downArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 26.38">
+            <svg id={styles.downArrow} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 26.38">
                 <defs>
                 </defs>
                 <title>About me</title>
@@ -78,9 +78,9 @@
         </a>
     </section>
 
-    <section id="about" class="page">
-        <div class="subHeader" id="bio">
-            <img id="photo"
+    <section id={styles.about} class="page">
+        <div class="subHeader" id={styles.bio}>
+            <img id={styles.photo}
                 src="https://res.cloudinary.com/lkaratun/image/upload/w_3000,h_3000,c_crop,g_face,r_max/w_600/v1540349988/portfolio/yellow_wall.jpg"
                 alt="my photo">
 
@@ -174,7 +174,7 @@
     </section>
 
     
-    <section id="projects" class="page">
+    <section id={styles.projects} class="page">
         <h2>My work</h2>
 
         <div class="projectsContainer">
@@ -276,7 +276,7 @@
                             hooks.</li>
                     </ul>
                     <h5 class="inline-header">Challenges</h5>
-                    <input type="checkbox" class="read-more-state" id="post-1" />
+                    <input type="checkbox" class="read-more-state" id={styles.post-1} />
                     <label for="post-1" class="read-more-trigger"></label>
 
                     <ol>
@@ -424,7 +424,7 @@
     </section>
 
 
-    <section id="contacts" class="page">
+    <section id={styles.contacts} class="page">
         <h4>Let's get in touch!</h4>
         <div class="subHeader">
             <a href="mailto:lev.karatun@gmail.com" target="_blank"> <object type="image/svg+xml" data="icons/email.svg"
